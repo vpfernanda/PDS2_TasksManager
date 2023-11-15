@@ -13,6 +13,6 @@ namespace task_manager::core{
              this->_tipo_horario == other._tipo_horario &&
               this->_turno_preferencia == other._turno_preferencia &&
               this->_duracao == other._duracao &&
-              this->_frequencia_realizacao = other._frequencia_realizacao;
+              this->_frequencia_realizacao == other._frequencia_realizacao;
     }
 }
