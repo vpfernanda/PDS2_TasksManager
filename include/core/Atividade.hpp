@@ -1,5 +1,7 @@
 #pragma once
 #include <string>
+#include "../src/core/Atividade.cpp"
+
 namespace task_manager::core{
 
 /** Enum para os possíveis tipos de horário
@@ -37,4 +39,3 @@ class Atividade{
 
 }
 
-#include "Atividade.cpp"
