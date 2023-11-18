@@ -16,3 +16,4 @@ namespace task_manager::core{
               this->_frequencia_realizacao == other._frequencia_realizacao;
     }
 }
+
