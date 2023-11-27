@@ -1,6 +1,5 @@
 #pragma once
 #include <string>
-#include "../src/core/Atividade.cpp"
 
 namespace task_manager::core{
 

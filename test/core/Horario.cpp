@@ -1,8 +1,7 @@
 //#pragma once
-#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "../doctest.hpp"
 #include <string>
-#include "../../include/core/Horario.hpp"
+#include "core/Horario.hpp"
 
 using task_manager::core::Horario;
 
