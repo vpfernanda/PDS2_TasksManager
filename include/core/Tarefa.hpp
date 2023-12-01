@@ -28,4 +28,3 @@ class Tarefa{
 
 }
 
-#include "Tarefa.cpp"

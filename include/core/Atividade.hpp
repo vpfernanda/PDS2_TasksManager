@@ -46,5 +46,4 @@ class Atividade{
         DIA _dia_semana; 
 };
 
-#include "Atividade.cpp"
 }

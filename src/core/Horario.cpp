@@ -1,4 +1,4 @@
-#include "../../include/core/Horario.hpp"
+#include "core/Horario.hpp"
 #include <string>
 
 namespace task_manager::core{
