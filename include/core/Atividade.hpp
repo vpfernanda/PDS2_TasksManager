@@ -1,40 +1,50 @@
 #pragma once
 #include <string>
+
 namespace task_manager::core{
 
-/** Enum para os possíveis tipos de horário
- *  Guarda os tipos possíveis de horário (Fixo ou livre)
- */
-enum TIPO_HORARIO{HORARIO_FIXO, HORARIO_LIVRE};
-/** 
- *  Enum para os turnos possíveis de preferência (manha, tarde, noite ou nenhum)
- */
+enum TIPO_HORARIO{FIXO, LIVRE};
+
 enum TURNO_PREFERENCIA{MANHA, TARDE, NOITE, NENHUM};
-//!  Classe Atividade. 
-/*!
-  Classe feita para representar atividades que fazem parte de uma Rotina, ou seja, tem frequência de realização (diária, semanal etc).
-*/
+
+enum DIA{DOM, SEG, TER, QUA, QUI, SEX, SAB};
+
 class Atividade{
     public:
-    //! Construtor da classe Atividade.
-    /*!
-      Recebe os dados para inicialização da classe (nome, tipo_horario, duracao_minutos, frequencia_realizacao).
-    */    
-        Atividade(std::string nome, TIPO_HORARIO tipo_horario, TURNO_PREFERENCIA turno_preferencia, unsigned duracao_minutos, unsigned frequencia_realizacao);
-    //! Operador de igualdade da classe Atividade
-    /*!
-      Compara membro a membro se são iguais.    
-    */   
-        bool operator==(Atividade other);
+
+        /// @brief - construtor Atividades
+        Atividade(std::string nome, TIPO_HORARIO tipo_horario, TURNO_PREFERENCIA turno_preferencia, 
+        unsigned duracao_minutos, DIA dia_semana);
+
+        /// @brief - implementação comparação entre atividades
+        /// @param other  
+        bool operator==(const Atividade& other)const;
+
+        /// @brief - recupera o dia da atividade a ser checada (_dia_semana)
+        DIA get_dia() const;
+        
+        /// @brief - recupera o turno de preferencia da atividade (_turno_preferencia)  
+        TURNO_PREFERENCIA get_turno() const;
+
+        /// @brief - compara atividades diferentes conforme a sua ordem (dia e turno) 
+        bool comparar_atividades(const Atividade& a, const Atividade& b);
+
+        ///@brief - retorna o horario com base no input do usuario
+        TIPO_HORARIO obter_horario();
+
+        ///@brief - retorna o turno com base no input do usuario
+        TURNO_PREFERENCIA obter_turno();
+
+        ///@brief - retorna o dia com base no input do usuario
+        DIA obter_dia();
+
     private:
-        std::string _nome; /// Armazena o nome da atividade.
-        TIPO_HORARIO _tipo_horario; /// Armazena se a atividade tem horario fixo ou livre.
-        TURNO_PREFERENCIA _turno_preferencia; /// Armazena se a atividade tem preferência de ser realizada em algum turno.
-        unsigned _duracao; /// Armazena em minutos a duração da atividade.
-        unsigned _frequencia_realizacao; /// Armazena a frequencia de realizacao da atividade em dias;
+        std::string _nome;
+        TIPO_HORARIO _tipo_horario; 
+        TURNO_PREFERENCIA _turno_preferencia; 
+        unsigned _duracao; 
+        DIA _dia_semana; 
 };
 
-
-}
-
 #include "Atividade.cpp"
+}
