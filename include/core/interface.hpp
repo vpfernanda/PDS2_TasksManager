@@ -23,12 +23,13 @@ class Interface{
     void imprimir_eventos_intervalo();
 
     /// @brief Imprime a rotina atual / escolhida
-    void imprimir_rotina();
-
+    void imprimir_rotina() const;
+    /// @brief Cria uma rotina
+    void criar_rotina();
     ///@brief opcao de editar / criar a rotina do usuario
     void editar_rotina();    
 
     private:
-
+    Rotina _rotina;
 };
 }

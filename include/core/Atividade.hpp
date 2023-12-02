@@ -20,6 +20,12 @@ class Atividade{
         /// @param other  
         bool operator==(const Atividade& other)const;
 
+        /// @brief - recupera o nome da atividade (_nome)
+        std::string get_nome() const;
+        /// @brief - recupera o horário da atividade (_horario)
+        TIPO_HORARIO get_horario() const;
+        /// @brief - recupera a duração atividade (_horario)
+        unsigned get_duracao() const;
         /// @brief - recupera o dia da atividade a ser checada (_dia_semana)
         DIA get_dia() const;
         
@@ -27,16 +33,18 @@ class Atividade{
         TURNO_PREFERENCIA get_turno() const;
 
         /// @brief - compara atividades diferentes conforme a sua ordem (dia e turno) 
-        bool comparar_atividades(const Atividade& a, const Atividade& b);
+        static bool comparar_atividades(const Atividade& a, const Atividade& b);
 
         ///@brief - retorna o horario com base no input do usuario
-        TIPO_HORARIO obter_horario();
+        static TIPO_HORARIO obter_horario();
 
         ///@brief - retorna o turno com base no input do usuario
-        TURNO_PREFERENCIA obter_turno();
+        static TURNO_PREFERENCIA obter_turno();
 
         ///@brief - retorna o dia com base no input do usuario
-        DIA obter_dia();
+        static DIA obter_dia();
+        ///@brief - cria atividade
+        static Atividade criarAtividade();
 
     private:
         std::string _nome;

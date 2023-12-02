@@ -1,4 +1,6 @@
 #include "core/Atividade.hpp"
+#include <iostream>
+#include <limits>
 
 namespace task_manager::core {
     Atividade::Atividade(std::string nome, TIPO_HORARIO tipo_horario, TURNO_PREFERENCIA turno_preferencia,
@@ -128,5 +130,5 @@ namespace task_manager::core {
             Atividade novaAtividade(nome, tipoHorario, turnoPreferencia, duracaoMinutos, diaSemana);
 
             return novaAtividade;
-        }
+    }
 }

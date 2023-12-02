@@ -1,4 +1,5 @@
 #include "core/interface.hpp"
+#include <iostream>
 
 namespace task_manager::core{
 
@@ -32,7 +33,7 @@ void Interface::imprimir_eventos_intervalo(){
 
     void Interface::imprimir_rotina() const { // Interface
         std::cout << "\n== Rotina Atual == \n";
-        std::vector<Atividade> rotina_atividades = rotina.get_rotina();
+        std::vector<Atividade> rotina_atividades = _rotina.get_rotina();
         for (const auto& atividade : rotina_atividades) {
             std::cout << "Nome: " << atividade.get_nome() << "\n";
             std::cout << "Horario de preferencia: " << atividade.get_horario() << "\n";
@@ -53,11 +54,11 @@ void Interface::imprimir_eventos_intervalo(){
                 break;
             }else{
                 Atividade atividade = Atividade::criarAtividade();
-                rotina.adicionar_atividade(atividade);
+                _rotina.adicionar_atividade(atividade);
                 std::cout <<"Atividade adicionada\n";
             }
         }
-        rotina.gerar_rotina();
+        _rotina.gerar_rotina();
     }
     
 

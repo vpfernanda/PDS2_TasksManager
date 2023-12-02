@@ -26,5 +26,4 @@ class Rotina{
     private:
         std::vector<Atividade> _Rotina;    
     };
-    #include "Rotina.cpp"
 }
