@@ -1,4 +1,4 @@
-#include "core/interface.hpp"
+#include "core/Interface.hpp"
 #include <iostream>
 
 namespace task_manager::core{
@@ -8,8 +8,8 @@ void Interface::imprimir_menu(){
     std::cout << "selecione a opcao desejada: \n[1] - Imprimir eventos do ano\n[2] - Imprimir eventos em um intervalo de tempo\n[3] - Imprimir rotina\n[4] - Criar rotina\n[0] - Finalizar programa\n";
 }
 
-void Interface::imprimir_eventos_ano(){ //precisa de acesso aos dados p/ implementar
-    std::cout<<"estou em imprimir eventos ano\n";
+void Interface::imprimir_eventos_ano(unsigned ano){
+    _agenda->buscar_eventos_ano(ano);
 }
 
 void Interface::imprimir_eventos_intervalo(){
@@ -20,7 +20,6 @@ void Interface::imprimir_eventos_intervalo(){
     std::string data_final;
     std::cout << "Digite a data final: ";
     std::cin >> data_final;
-
     //procurar eventos no banco de dados no período informado
        
     std::cout << "intervalo: " << data_inicial << " ate " << data_final <<"\n";
@@ -31,17 +30,8 @@ void Interface::imprimir_eventos_intervalo(){
     imprimir_menu();
 }
 
-    void Interface::imprimir_rotina() const { // Interface
-        std::cout << "\n== Rotina Atual == \n";
-        std::vector<Atividade> rotina_atividades = _rotina.get_rotina();
-        for (const auto& atividade : rotina_atividades) {
-            std::cout << "Nome: " << atividade.get_nome() << "\n";
-            std::cout << "Horario de preferencia: " << atividade.get_horario() << "\n";
-            std::cout << "Turno de preferencia: " << atividade.get_turno() << "\n";
-            std::cout << "Duracao: " << atividade.get_duracao() << " minutos\n";
-            std::cout << "Dia da semana: " << atividade.get_dia() << "\n";
-            std::cout << "------------------------\n";
-        }
+    void Interface::imprimir_rotina()  const{ // Interface
+        std::cout << _agenda->get_rotina()->to_string();
     }
 
     void Interface::criar_rotina(){//interface 
@@ -49,16 +39,16 @@ void Interface::imprimir_eventos_intervalo(){
         while(1){
             std::cout<<"adicionar atividade? (1 = sim, qualquer outra tecla = nao): ";
             std::cin >> state;
-            
+ 
             if(state != 1){
                 break;
             }else{
                 Atividade atividade = Atividade::criarAtividade();
-                _rotina.adicionar_atividade(atividade);
+                _agenda->get_rotina()->adicionar_atividade(atividade);
                 std::cout <<"Atividade adicionada\n";
             }
         }
-        _rotina.gerar_rotina();
+        _agenda->get_rotina()->gerar_rotina();
     }
     
 
@@ -79,7 +69,7 @@ void Interface::editar_rotina(){
 
         case 2:
         imprimir_rotina();
-        std::cout <<"voce deseja remover / adicionar alguma atividade?\nSla, ve se ta funfando";
+        std::cout <<"voce deseja remover / adicionar alguma atividade?\n";
         break;
 
         default:
@@ -98,7 +88,10 @@ void Interface::input_menu(unsigned input){
 
         case 1:
         std::cout << "Opcao 1 - Imprimir eventos do ano\n";
-        imprimir_eventos_ano();
+        unsigned ano_selecionado;
+        std::cout << "Digite o ano: ";
+        std::cin >> ano_selecionado;
+        imprimir_eventos_ano(ano_selecionado);
         break;
 
         case 2:
@@ -121,6 +114,11 @@ void Interface::input_menu(unsigned input){
         imprimir_menu();
         break;
     }
-
 }
+    void Interface::set_agenda(Agenda* agenda){
+        _agenda = agenda;
+    }
+    Agenda* Interface::get_agenda() const{
+        return _agenda;
+    }
 }

@@ -16,17 +16,16 @@ namespace task_manager::core{
     /// @brief Implementação do operador de comparação para um objeto Horario.
     /// @param other 
     /// @return  verdadeiro ou falso
-        bool Horario::operator==(Horario other){
+        bool Horario::operator==(const Horario& other) const{
             return this->_hora == other.get_hora() && this->_min == other.get_min();
         }
 
     /// @brief Interface para a implementação do operador de maior para um objeto Horario. Um horário ser "maior" significa que ele ocorre depois.
     /// @param other 
     /// @return verdadeiro ou falso.            
-        bool Horario::operator>(Horario other){
+        bool Horario::operator>(const Horario& other) const{
             unsigned hora = this->_hora;
-            if(this->_hora == 0)
-                hora = 24;
+            
 
             if(hora > other.get_hora() || 
             (hora == other.get_hora() && this->_min > other.get_min()))
@@ -35,10 +34,16 @@ namespace task_manager::core{
             return false;
         }
 
+        Horario Horario::operator+(int minutos){
+            unsigned novos_minutos = (this->_min + minutos) % 60;
+            unsigned nova_hora = this->_hora + ((this->_min + minutos) / 60);
+            return Horario(nova_hora, novos_minutos);
+        }
+
     /// @brief Interface para a implementação do operador de menor para um objeto Horario. Um horário ser "menor" significa que ele ocorre antes.
     /// @param other 
     /// @return verdadeiro ou falso.            
-        bool Horario::operator<(Horario other){
+        bool Horario::operator<(const Horario& other) const{
             unsigned hora = this->_hora;
             if(this->_hora == 0)
                 hora = 24;
@@ -53,19 +58,19 @@ namespace task_manager::core{
 
     /// @brief Informa o atributo hora.
     /// @return Retorna o valor de _hora.
-        unsigned Horario::get_hora(){
+        unsigned Horario::get_hora() const{
             return _hora;
         }
 
     /// @brief Informa o atributo minuto.
     /// @return Retorna o valor de _min.
-        unsigned Horario::get_min(){
+        unsigned Horario::get_min() const{
             return _min;
         }
 
     /// @brief Realiza a conversão dos valores hora e minuto para o formato hh:mm
     /// @return Retorna uma string de horario no formato "hh:mm"
-        std::string Horario::to_String(){
+        std::string Horario::to_String() const{
             std::string hora = "";
             std::string min = "";
             if(_hora <= 9){

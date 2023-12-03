@@ -22,30 +22,33 @@ class Horario{
     /// @brief Interface para a implementação do operador de comparação para um objeto Horario.
     /// @param other 
     /// @return  verdadeiro ou falso
-        bool operator==(Horario other);
+        bool operator==(const Horario& other) const;
 
         
     /// @brief Interface para a implementação do operador de menor para um objeto Horario.
     /// @param other 
     /// @return verdadeiro ou falso.            
-        bool operator<(Horario other);
+        bool operator<(const Horario& other) const;
 
-     /// @brief Interface para a implementação do operador de maior para um objeto Horario.
+    /// @brief Interface para a implementação do operador de maior para um objeto Horario.
     /// @param other 
     /// @return verdadeiro ou falso.            
-        bool operator>(Horario other);
-
+        bool operator>(const Horario& other) const;
+    /// @brief Interface para a implementação do operador de soma para um objeto Horario
+    /// @param other 
+    /// @return Novo horário com os minutos           
+        Horario operator+(int minutos);
     /// @brief Informa o atributo hora.
     /// @return Retorna o valor de _hora.
-        unsigned get_hora();
+        unsigned get_hora() const;
 
     /// @brief Informa o atributo minuto.
     /// @return Retorna o valor de _min.
-        unsigned get_min();
+        unsigned get_min() const;
 
     /// @brief Realiza a conversão dos valores hora e minuto para o formato hh:mm
     /// @return Retorna uma string de horario no formato "hh:mm"
-        std::string to_String();
+        std::string to_String() const;
 
     /// @brief Faz o cálculo da duração de tempo entre dois horários
     /// @param inicio 

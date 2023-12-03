@@ -1,7 +1,12 @@
 #include <iostream>
 #include "core/Atividade.hpp"
+#include "core/Rotina.hpp"
+#include "core/Interface.hpp"
 
 int main(){
-    task_manager::core::Atividade oi("cafe", task_manager::core::HORARIO_FIXO, task_manager::core::MANHA, 50, 3);
+    // Inicializando a interface
+    task_manager::core::Agenda agenda(NULL);
+    task_manager::core::Interface interface(NULL);
+    interface.imprimir_menu();
     return 0;
 }
