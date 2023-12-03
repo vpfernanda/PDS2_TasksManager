@@ -9,7 +9,10 @@ enum TIPO_HORARIO{FIXO, LIVRE};
 enum TURNO_PREFERENCIA{MANHA, TARDE, NOITE, NENHUM};
 
 enum DIA{DOM, SEG, TER, QUA, QUI, SEX, SAB};
-
+//!  Classe Atividade. 
+/*!
+  Classe feita para representar uma Atividade, que pode ter um horário fixo ou livre. Dependendo de qual o construtor usado será diferente.
+*/
 class Atividade{
     public:
 
