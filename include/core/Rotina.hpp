@@ -5,7 +5,10 @@
 #include "Atividade.hpp"
 
 namespace task_manager::core{
-
+//!  Classe Rotina. 
+/*!
+  Classe feita para representar uma Rotina de 7 dias, organizando de maneira automatizada os horários das atividades.
+*/
 class Rotina{
     public:
     ///@brief - Construtor da rotina

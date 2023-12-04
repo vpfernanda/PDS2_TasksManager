@@ -7,15 +7,18 @@
 using std::setw;
 using std::left;
 namespace task_manager::core{
+    
     bool comparar_atividades(const Atividade& a, const Atividade& b) {
         return a.get_horario_inicio() < b.get_horario_inicio();
     }
+
     bool conflito_horario(Horario inicio_atv1, Horario fim_atv1, Horario inicio_atv2, Horario fim_atv2){
         // A nova atividade a ser adicionada não pode ter intercessão de horário com outra atividade de horario fixo, ou seja,
         // não pode começar antes de outra e terminar depois do inicio de outra, e não pode começar entre o inicio e fim de outra
         if ((fim_atv1 > inicio_atv2 && fim_atv1 < fim_atv2) || (inicio_atv1 > inicio_atv2 && inicio_atv1 < fim_atv2)) return true;
         return false;
     }
+
     bool intersecao_dias(Atividade atv1, Atividade atv2){
         std::vector<DIA> dias1 = atv1.get_dias_semana();
         std::vector<DIA> dias2 = atv2.get_dias_semana();
@@ -28,14 +31,14 @@ namespace task_manager::core{
         bool valido = true;
         for(Atividade atv : _atividades_rotina){
             if(atividade == atv){
-                std::cout << "Atividade já inclusa.\n";
+                std::cout << "Atividade ja inclusa.\n";
                 valido = false;
                 break;
             }
             if (atividade.get_tipo_horario() == FIXO && intersecao_dias(atividade, atv)){
                 if (conflito_horario(atividade.get_horario_inicio(), atividade.get_horario_fim(), atv.get_horario_inicio(), atv.get_horario_fim())){
                     valido = false;
-                    std::cout << "Há um conflito de horário com essa atividade\n";
+                    std::cout << "Ha um conflito de horario com essa atividade\n";
                 }
             }
         }
@@ -127,9 +130,9 @@ namespace task_manager::core{
     }
     std::string Rotina::to_string(){
         std::stringstream strstream;
-        if (!gerar_rotina()) strstream << "Esta rotina é impossível\n";
+        if (!gerar_rotina()) strstream << "Esta rotina e impossivel\n";
         else{
-            strstream << setw(35) << left << "Domingo" << setw(35) << left << "Segunda" << setw(35) << left << "Terça" << setw(35) << left << "Quarta" << setw(35) << left << "Quinta" << setw(35) << left << "Sexta" << setw(35) << left << "Sábado" << "\n";
+            strstream << setw(35) << left << "Domingo" << setw(35) << left << "Segunda" << setw(35) << left << "Terca" << setw(35) << left << "Quarta" << setw(35) << left << "Quinta" << setw(35) << left << "Sexta" << setw(35) << left << "Sábado" << "\n";
             std::vector<Atividade> atividades_por_dia[7];
             for (Atividade &atv: _atividades_rotina){
                 std::vector<DIA> dias_semana_ocorre = atv.get_dias_semana();

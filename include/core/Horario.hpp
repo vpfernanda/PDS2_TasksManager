@@ -7,7 +7,7 @@
 
 namespace task_manager::core{
 
-/// @brief Classe horario para abstração de horas e minutos.
+/// @brief Classe Horario para abstração de horas e minutos.
 class Horario{
     public:
     ///@brief Construtor default da classe Horario. Inicializa as variaveis _hora e _min com valor 0.

@@ -1,15 +1,21 @@
 #include "core/Interface.hpp"
 #include <iostream>
+#include <limits>
 
 namespace task_manager::core{
 
 void Interface::imprimir_menu(){
+<<<<<<< Updated upstream
+    std::cout << "\nTASK - MANAGER PDSII\n";
+=======
     std::cout << "\nTexto inicial \n";
-    std::cout << "selecione a opcao desejada: \n[1] - Imprimir eventos do ano\n[2] - Imprimir eventos em um intervalo de tempo\n[3] - Imprimir rotina\n[4] - Criar rotina\n[0] - Finalizar programa\n";
+>>>>>>> Stashed changes
+    std::cout << "selecione a opcao desejada: \n[1] - Imprimir eventos do ano\n[2] - Imprimir eventos em um intervalo de tempo\n[3] - Imprimir rotina\n[4] - Editar rotina\n[0] - Finalizar programa\n";
 }
 
-void Interface::imprimir_eventos_ano(unsigned ano){
+void Interface::imprimir_eventos_ano(unsigned ano){ //finaliza a execução
     _agenda->buscar_eventos_ano(ano);
+    std::cout<<"imprimindo eventos...\n";
 }
 
 void Interface::imprimir_eventos_intervalo(){
@@ -27,40 +33,53 @@ void Interface::imprimir_eventos_intervalo(){
     //imprimir eventos durante o periodo - precisa da classe agenda
 
     std::cout << "\nvoltando ao menu inicial . . .\n";
-    imprimir_menu();
 }
 
-    void Interface::imprimir_rotina()  const{ // Interface
+<<<<<<< Updated upstream
+    void Interface::imprimir_rotina()  const{
+=======
+    void Interface::imprimir_rotina()  const{ //finaliza a execução
+>>>>>>> Stashed changes
         std::cout << _agenda->get_rotina()->to_string();
     }
 
-    void Interface::criar_rotina(){//interface 
-        unsigned state;
-        while(1){
-            std::cout<<"adicionar atividade? (1 = sim, qualquer outra tecla = nao): ";
-            std::cin >> state;
- 
-            if(state != 1){
+ void Interface::criar_rotina() {
+    unsigned state;
+    
+    while (true) {
+        std::cout << "Adicionar atividade? (1 = sim, 0 = nao): ";
+
+        if (std::cin >> state) {
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+            if (state == 0) {
+                std::cout << "\nImprimindo a sua rotina atual . . . \n";
+                imprimir_rotina();
                 break;
-            }else{
+            } else if (state == 1) {
                 Atividade atividade = Atividade::criarAtividade();
                 _agenda->get_rotina()->adicionar_atividade(atividade);
-                std::cout <<"Atividade adicionada\n";
+                std::cout << "Atividade adicionada\n";
+            } else {
+                std::cout << "Entrada invalida. Digite 1 ou 0.\n";
             }
+        } else {
+            std::cout << "Entrada invalida. Digite 1 ou 0.\n";
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         }
-        _agenda->get_rotina()->gerar_rotina();
     }
+}
     
 
 void Interface::editar_rotina(){
-    std::cout << "selecione a opcao desejada:\n [1] - criar rotina\n [2] - editar rotina\n [0] - voltar ao menu principal\n";
+    std::cout << "selecione a opcao desejada:\n  [1] - criar rotina\n  [2] - editar rotina\n  [0] - voltar ao menu principal\n";
     unsigned input;
     std::cin >> input;
 
     switch (input){
         case 0:
         std::cout << "voltando ao menu principal \n";
-        //Interface::imprimir_menu();
         break;
 
         case 1:
@@ -78,7 +97,6 @@ void Interface::editar_rotina(){
         break;
     }
 }
-
 
 void Interface::input_menu(unsigned input){
     switch (input){
@@ -100,18 +118,17 @@ void Interface::input_menu(unsigned input){
         break;
 
         case 3:
-        std::cout << "Opcao 3 - Acessar rotina\n";
+        std::cout << "Opcao 3 - Imprimir rotina\n";
         imprimir_rotina();
         break;
 
         case 4:
-        std::cout << "Opcao 4 - Criar rotina\n";
+        std::cout << "Opcao 4 - Editar rotina\n";
         editar_rotina();
         break;
 
         default:
         std::cout << "\nOPCAO INVALIDA - voltando ao menu inicial\n";
-        imprimir_menu();
         break;
     }
 }

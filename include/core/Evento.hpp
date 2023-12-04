@@ -3,7 +3,10 @@
 #include "Data.hpp"
 #include "Horario.hpp"
 namespace task_manager::core{
-
+//!  Classe Evento. 
+/*!
+  Classe feita para representar um Evento, que tem data e horário de início.
+*/
 class Evento{
     public:
     /// @brief - Construtor da classe evento
