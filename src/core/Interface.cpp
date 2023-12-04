@@ -129,10 +129,6 @@ void Interface::input_menu(unsigned input){
 
         default:
         std::cout << "\nOPCAO INVALIDA - voltando ao menu inicial\n";
-<<<<<<< Updated upstream
-=======
-        //imprimir_menu();
->>>>>>> Stashed changes
         break;
     }
 }
