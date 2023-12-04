@@ -5,11 +5,15 @@
 namespace task_manager::core{
 
 void Interface::imprimir_menu(){
+<<<<<<< Updated upstream
     std::cout << "\nTASK - MANAGER PDSII\n";
+=======
+    std::cout << "\nTexto inicial \n";
+>>>>>>> Stashed changes
     std::cout << "selecione a opcao desejada: \n[1] - Imprimir eventos do ano\n[2] - Imprimir eventos em um intervalo de tempo\n[3] - Imprimir rotina\n[4] - Editar rotina\n[0] - Finalizar programa\n";
 }
 
-void Interface::imprimir_eventos_ano(unsigned ano){
+void Interface::imprimir_eventos_ano(unsigned ano){ //finaliza a execução
     _agenda->buscar_eventos_ano(ano);
     std::cout<<"imprimindo eventos...\n";
 }
@@ -31,7 +35,11 @@ void Interface::imprimir_eventos_intervalo(){
     std::cout << "\nvoltando ao menu inicial . . .\n";
 }
 
+<<<<<<< Updated upstream
     void Interface::imprimir_rotina()  const{
+=======
+    void Interface::imprimir_rotina()  const{ //finaliza a execução
+>>>>>>> Stashed changes
         std::cout << _agenda->get_rotina()->to_string();
     }
 
@@ -121,6 +129,10 @@ void Interface::input_menu(unsigned input){
 
         default:
         std::cout << "\nOPCAO INVALIDA - voltando ao menu inicial\n";
+<<<<<<< Updated upstream
+=======
+        //imprimir_menu();
+>>>>>>> Stashed changes
         break;
     }
 }
