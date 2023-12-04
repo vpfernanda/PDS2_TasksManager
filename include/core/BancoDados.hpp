@@ -1,10 +1,12 @@
 #pragma once
+#include <vector>
 #include <iostream>
 #include <fstream>
 #include <string>
 #include "Rotina.hpp"
 #include "Atividade.hpp"
 #include "Agenda.hpp"
+#include "Evento.hpp"
 
 namespace task_manager::core{
     class BancoDados{
@@ -40,7 +42,8 @@ namespace task_manager::core{
         /// @brief Limpa o banco de dados de eventos em sua totalidade.
         bool limpar_eventos();
 
-
+        /// @brief Retorna todos os eventos salvos
+        std::vector<Evento> ler_eventos();
 
         private:
         std::string _r1; 

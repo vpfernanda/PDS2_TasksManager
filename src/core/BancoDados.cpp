@@ -115,5 +115,36 @@ namespace task_manager::core{
             }
             return false;
         }
-
+        /// @brief Retorna todos os eventos salvos
+        std::vector<Evento> BancoDados::ler_eventos(){
+            std::vector<Evento> eventos;
+            std::string linha;
+            std::size_t pos_separador1; 
+            std::size_t pos_separador2; 
+            std::fstream arquivo(_eventos_ano, std::ios::in | std::ios::out);
+            if(arquivo.is_open()){
+                while(std::getline(arquivo, linha)){
+                    pos_separador1 = linha.find("|");
+                    pos_separador2 = linha.find("|", pos_separador1 + 1);
+                    if(pos_separador1 != std::string::npos && pos_separador1 != std::string::npos){
+                        std::string nome_evento_linha = linha.substr(0, pos_separador1);
+                        std::string data_linha = linha.substr(pos_separador1 + 1, pos_separador2 - pos_separador1 - 1);
+                        // Pegando o dia, mes e ano da string
+                        std::string horario_linha = linha.substr(pos_separador2 + 1);
+                        std::size_t pos_separador_data_1 = data_linha.find("/");
+                        std::size_t pos_separador_data_2 = data_linha.find("/", pos_separador_data_1 + 1);
+                        unsigned dia = stoi(data_linha.substr(0, pos_separador_data_1));
+                        unsigned mes = stoi(data_linha.substr(pos_separador_data_1 + 1, pos_separador_data_2 - 1));
+                        unsigned ano = stoi(data_linha.substr(pos_separador_data_2 + 1));
+                        // Pegando as horas e minutos do evento
+                        std::size_t pos_separador_horario_1 = horario_linha.find(":");
+                        unsigned horas = stoi(horario_linha.substr(0, pos_separador_horario_1));
+                        unsigned minutos = stoi(horario_linha.substr(pos_separador_horario_1 + 1));
+                        // Jogando no vetor o evento lido
+                        eventos.push_back(Evento(nome_evento_linha, Data(dia, mes, ano), Horario(horas, minutos)));
+                    }
+                }
+            }
+            return eventos;
+        }
 }
