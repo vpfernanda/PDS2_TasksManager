@@ -11,38 +11,25 @@ namespace task_manager::core {
     }
 
     bool Data::operator<(const Data& other) const{
-        if (_ano < other._ano) return true;
-        if (_ano > other._ano) return false;
-
-        if (_mes < other._mes) return true;
-        if (_mes > other._mes) return false;
-
-        return _dia < other._dia;
+        if (this->_ano < other._ano) return true;
+        if (this->_ano == other._ano && this->_mes < other._mes) return true;
+        if (this->_ano == other._ano && this->_mes == other._mes && this->_dia < other._dia) return true;
+        return false;
     }
 
     bool Data::operator>(const Data& other) const{
-
-        if (_ano > other._ano) return true;
-        if (_ano < other._ano) return false;
-
-        if (_mes > other._mes) return true;
-        if (_mes < other._mes) return false;
-
-        return _dia > other._dia;
+        if (this->_ano > other._ano) return true;
+        if (this->_ano == other._ano && this->_mes > other._mes) return true;
+        if (this->_ano == other._ano && this->_mes == other._mes && this->_dia > other._dia) return true;
+        return false;
     }
     bool Data::operator>=(const Data& other) const{
-        if (_ano >= other._ano) return true;
-
-        if (_mes >= other._mes) return true;;
-
-        return _dia > other._dia;
+        if (*this == other) return true;
+        return (*this > other);
     }
     bool Data::operator<=(const Data& other) const{
-        if (_ano < other._ano) return true;
-
-        if (_mes <= other._mes) return true;
-
-        return _dia <= other._dia;
+        if (*this == other) return true;
+        return (*this < other);
     }
 
     std::string Data::to_string() const{
