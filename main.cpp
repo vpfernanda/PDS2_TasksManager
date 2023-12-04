@@ -6,7 +6,6 @@
 using namespace task_manager::core;
 
 int main(){
-<<<<<<< Updated upstream
     
     Interface interface(NULL);
     Agenda agenda(NULL);
@@ -21,18 +20,6 @@ int main(){
         if(!input){
         break;
         }
-=======
-    while(1){
-        task_manager::core::Agenda agenda(NULL);
-        task_manager::core::Interface interface(NULL);
-        interface.imprimir_menu();
-        unsigned input;
-        std::cin >> input;
-        if(!input){
-            break;
-        }
-        interface.input_menu(input);
->>>>>>> Stashed changes
     }
     return 0;
 }
