@@ -7,15 +7,18 @@
 using std::setw;
 using std::left;
 namespace task_manager::core{
+    
     bool comparar_atividades(const Atividade& a, const Atividade& b) {
         return a.get_horario_inicio() < b.get_horario_inicio();
     }
+
     bool conflito_horario(Horario inicio_atv1, Horario fim_atv1, Horario inicio_atv2, Horario fim_atv2){
         // A nova atividade a ser adicionada não pode ter intercessão de horário com outra atividade de horario fixo, ou seja,
         // não pode começar antes de outra e terminar depois do inicio de outra, e não pode começar entre o inicio e fim de outra
         if ((fim_atv1 > inicio_atv2 && fim_atv1 < fim_atv2) || (inicio_atv1 > inicio_atv2 && inicio_atv1 < fim_atv2)) return true;
         return false;
     }
+
     bool intersecao_dias(Atividade atv1, Atividade atv2){
         std::vector<DIA> dias1 = atv1.get_dias_semana();
         std::vector<DIA> dias2 = atv2.get_dias_semana();
