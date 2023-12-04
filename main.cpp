@@ -3,10 +3,23 @@
 #include "core/Rotina.hpp"
 #include "core/Interface.hpp"
 
+using namespace task_manager::core;
+
 int main(){
-    // Inicializando a interface
-    task_manager::core::Agenda agenda(NULL);
-    task_manager::core::Interface interface(NULL);
+    
+    Interface interface(NULL);
+    Agenda agenda(NULL);
+
+    while(1){
+    unsigned input;
+
     interface.imprimir_menu();
+    
+    std::cin >> input;
+    interface.input_menu(input);
+        if(!input){
+        break;
+        }
+    }
     return 0;
 }

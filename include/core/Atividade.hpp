@@ -19,36 +19,55 @@ class Atividade{
     /// @brief - construtor Atividade com horário livre
     Atividade(std::string nome, TIPO_HORARIO tipo_horario, TURNO_PREFERENCIA turno_preferencia, 
     unsigned duracao_minutos, std::vector<DIA> dias_semana);
+    
     ///@brief - construtor Atividade com horário fixo
     Atividade(std::string nome, TIPO_HORARIO tipo_horario, 
     Horario inicio, Horario fim, std::vector<DIA> dias_semana);
+    
     /// @brief - implementação comparação entre atividades
     /// @param other  
     bool operator==(const Atividade& other) const;
+    
     /// @brief - recupera o nome da atividade (_nome)
     std::string get_nome() const;
+    
     /// @brief - recupera o horário da atividade (_horario)
     TIPO_HORARIO get_tipo_horario() const;
+    
     /// @brief - recupera a duração atividade (_horario)
     unsigned get_duracao() const;
+    
     /// @brief - recupera o dia da atividade a ser checada (_dia_semana)
     std::vector<DIA> get_dias_semana() const;
+    
     /// @brief - recupera o turno de preferencia da atividade (_turno_preferencia)  
     TURNO_PREFERENCIA get_turno() const;
+    
     /// @brief - recupera o horário de inicio da atividade
     Horario get_horario_inicio() const;
+    
     /// @brief - recupera o horário de termino da atividade
     Horario get_horario_fim() const;
+    
     /// @brief - set o novo horário de inicio
-    Horario set_horario_inicio(Horario inicio);
+    void set_horario_inicio(Horario inicio);
+    
     /// @brief - set o novo horário de fim
-    Horario set_horario_fim(Horario fim);
+    void set_horario_fim(Horario fim);
+    
     /// @brief - Devolve o objeto em formato de string
     std::string to_string() const;
+    
+    /// @brief - organiza o vetor de dias da semana
+    /// @param dias - vetor a ser organizado
+    static void sort_dia(std::vector<DIA>& dias);
+    
     /// @brief - compara atividades diferentes conforme a sua ordem (dia e turno) 
     static bool comparar_atividades(const Atividade& a, const Atividade& b);
+    
     ///@brief - retorna o horario com base no input do usuario
     static Atividade criarAtividade();
+    
     private:
         std::string _nome;
         TIPO_HORARIO _tipo_horario; 

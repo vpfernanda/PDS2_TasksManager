@@ -25,7 +25,7 @@ namespace task_manager::core{
         std::string str;
         str += "Nome: " + _nome + "\n";
         str += "Data: " + _data.to_string() + "\n";
-        str += "Horário: " + _horario_inicio.to_String() + "\n";
+        str += "Horario: " + _horario_inicio.to_String() + "\n";
         return str;
     }
     std::string Evento::get_nome() const{
