@@ -228,13 +228,14 @@ namespace task_manager::core {
                 std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             }
         }
-
+        diasSemana = obter_dias();
         if (tipoHorario == 0) { // horario fixo
             while (true) {
                 std::cout << "Digite o horario que a atividade comeca:\n";
                 inicio = obter_horario();
                 std::cout << "Digite o horario que a atividade termina:\n";
                 fim = obter_horario();
+
                 if (inicio > fim) {
                     std::cout << "Horario de inicio e fim inválido, digite novamente\n";
                 } else {
@@ -246,7 +247,7 @@ namespace task_manager::core {
             turno = obter_turno();
             std::cout << "Digite, em minutos, quanto dura a atividade\n";
             duracao = obter_duracao();
-            diasSemana = obter_dias();
+            
             return Atividade(nome, tipoHorario, turno, duracao, diasSemana);
         }
     }

@@ -29,7 +29,6 @@ namespace task_manager::core{
             Evento evento4("Exame Direcao", Data(2,7,2023), Horario(9,0));
             CHECK(bd.gravar_evento(evento4));
             CHECK_FALSE(bd.deletar_evento("Evento nao existente", "xxx", "xxx"));
-            std::vector<Evento> eventos = bd.ler_eventos();
     }
 
 }

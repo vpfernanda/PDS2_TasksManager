@@ -4,6 +4,7 @@
 #include "Rotina.hpp"
 #include "Atividade.hpp"
 #include "Agenda.hpp"
+#include "BancoDados.hpp"
 namespace task_manager::core{
 //!  Classe Interface. 
 /*!
@@ -11,7 +12,8 @@ namespace task_manager::core{
 */
 class Interface{
     public:
-    Interface(Agenda* agenda): _agenda(agenda){};
+    // @brief Construtor
+    Interface(Agenda* agenda) : _agenda(agenda){};
     /// @brief Imprime o menu
     void imprimir_menu();
 
@@ -23,9 +25,10 @@ class Interface{
     /// @param ano representa o ano para ser feito a busca
     void imprimir_eventos_ano(unsigned ano);
 
-    /// @brief - TBD - necessário classe Agenda p/ implementar 
+    /// @brief - Imprime os eventos entre os intervalos dados pelo usuário
     void imprimir_eventos_intervalo();
-
+    /// @brief  - Adiciona um evento a agenda
+    void adicionar_evento();
     /// @brief Imprime a rotina atual / escolhida
     void imprimir_rotina() const;
     /// @brief Cria uma rotina
