@@ -16,7 +16,7 @@ bool compara_vetores(std::vector<T> vec1, std::vector<T> vec2){
 namespace task_manager::core {
 
     Atividade::Atividade(std::string nome, TIPO_HORARIO tipo_horario, TURNO_PREFERENCIA turno_preferencia, 
-        unsigned duracao_minutos, std::vector<DIA> dias_semana): _horario_inicio(Horario()), _horario_fim(Horario()){ // hprario livre
+        unsigned duracao_minutos, std::vector<DIA> dias_semana): _horario_inicio(Horario()), _horario_fim(Horario()){ // horario livre
         _nome = nome;
         _tipo_horario = tipo_horario;
         _turno_preferencia = turno_preferencia;
@@ -110,7 +110,6 @@ namespace task_manager::core {
     Horario obter_horario() {
         unsigned horas;
         unsigned minutos;
-<<<<<<< Updated upstream
 
         while(true){
             std::cout << "Digite a hora (0 a 23): ";
@@ -123,36 +122,6 @@ namespace task_manager::core {
                 }
             }else{
                 std::cout << "Entrada invalida. Digite corretamente.\n";
-=======
-        std::cout << "Digite a hora (0 a 23):\n";
-        std::cin >> horas;
-        while (horas < 0 || horas > 23){
-            std::cout << "Hora invalida, digite novamente\n";
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            std::cin >> horas;
-        }
-        std::cout << "Digite os minutos (0 a 59)";
-        while (minutos > 59){
-            std::cout << "Minutos invalidos, digite novamente\n";
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            std::cin >> minutos;
-        }
-        return Horario(horas, minutos);
-    }
-    
-    TURNO_PREFERENCIA obter_turno(){
-        bool correct = false;
-        int escolha;
-
-        while(!correct){
-            std::cout << "escolha o turno da atividade, 0 para MANHA, 1 para TARDE, 2 para NOITE";
-            std::cin >> escolha;
-
-            if(std::cin.fail() || escolha < 0 || escolha > 2){
-                std::cout << "turno invalido, escolha novamente\n";
->>>>>>> Stashed changes
                 std::cin.clear();
                 std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             }
@@ -226,20 +195,6 @@ namespace task_manager::core {
         
         return static_cast<TURNO_PREFERENCIA>(escolha);
     }
-<<<<<<< Updated upstream
-=======
-    unsigned obter_duracao(){
-        unsigned minutos = 0;
-        std::cin >> minutos;
-        while (minutos > 59){
-            std::cout << "Duracao invalida, digite novamente\n";
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            std::cin >> minutos;
-        }
-        return minutos;
-    }
->>>>>>> Stashed changes
 
     Atividade Atividade::criarAtividade() {
         std::string nome;
@@ -274,7 +229,6 @@ namespace task_manager::core {
             }
         }
 
-<<<<<<< Updated upstream
         if (tipoHorario == 0) { // horario fixo
             while (true) {
                 std::cout << "Digite o horario que a atividade comeca:\n";
@@ -286,33 +240,6 @@ namespace task_manager::core {
                 } else {
                     break;
                 }
-=======
-
-     Atividade Atividade::criarAtividade() {
-            std::string nome;
-            unsigned tipoHorario;
-            std::vector<DIA> diasSemana;
-
-            std::cout << "Digite o nome da atividade:\n";
-            std::getline(std::cin >> std::ws, nome);
-
-            std::cout << "Esta atividade tem horario fixo? Digite 0 para SIM e 1 para NÃO\n";
-            std::cin >> tipoHorario;
-            if (tipoHorario == FIXO){
-                std::cout << "Digite o horario em que a atividade começa:\n";
-                Horario inicio = obter_horario();
-                std::cout << "Digite o horario em que a atividade termina:\n";
-                Horario fim = obter_horario();
-                std::vector<DIA> dias_semana = obter_dias();
-                return Atividade(nome, FIXO, inicio, fim, dias_semana);
-            }
-            else{
-                TURNO_PREFERENCIA turnoPreferencia = obter_turno();
-                std::cout << "Digite em minutos quanto dura a atividade\n";
-                unsigned duracao = obter_duracao();
-                std::vector<DIA> dias_semana = obter_dias();
-                return Atividade(nome, LIVRE, turnoPreferencia, duracao, dias_semana);
->>>>>>> Stashed changes
             }
             return Atividade(nome, tipoHorario, inicio, fim, diasSemana);
         } else { // horario livre
