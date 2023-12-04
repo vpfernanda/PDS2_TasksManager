@@ -28,6 +28,15 @@ namespace task_manager::core{
         str += "Horário: " + _horario_inicio.to_String() + "\n";
         return str;
     }
+
+    std::string Evento::to_string_bd() const{
+         std::string str;
+        str +=  _nome + "|";
+        str += _data.to_string() + "|";
+        str += _horario_inicio.to_String() + "\n";
+        return str;
+    }
+
     std::string Evento::get_nome() const{
         return _nome;
     }

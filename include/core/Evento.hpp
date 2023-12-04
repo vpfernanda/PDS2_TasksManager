@@ -16,6 +16,8 @@ class Evento{
     bool operator>(const Evento& other) const;
     /// @brief - Método to_string para imprimir
     std::string to_string() const;
+    /// @brief Método "to_string" específico para gravação no banco de dados
+    std::string to_string_bd() const;
     /// @brief - Getter do nome (_nome)
     std::string get_nome() const;
     /// @brief - Getter da data (_data)
