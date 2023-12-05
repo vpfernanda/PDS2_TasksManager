@@ -23,10 +23,10 @@ namespace task_manager::core {
         return eventos_intervalo;
     }
 
-    Rotina* Agenda::get_rotina() const {
+    std::shared_ptr<Rotina> Agenda::get_rotina() const {
         return _rotina;
     }
-    void Agenda::set_rotina(Rotina* rotina){
+    void Agenda::set_rotina(std::shared_ptr<Rotina> rotina){
         _rotina = rotina;
     }
     bool Agenda::adiciona_evento(Evento& evento){

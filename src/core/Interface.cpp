@@ -4,7 +4,7 @@
 #include "core/Agenda.hpp"
 #include "core/BancoDados.hpp"
 #include "core/Data.hpp"
-
+using std::make_shared;
 namespace task_manager::core{
     Horario obter_horario_evento() {
         unsigned horas;
@@ -126,8 +126,8 @@ namespace task_manager::core{
     std::string nome_rotina;
     std::cout << "Digite o nome da rotina: ";
     std::cin >> nome_rotina;
-    Rotina nova_rotina(nome_rotina);
-    this->_agenda->set_rotina(&nova_rotina);
+    auto nova_rotina = make_shared<Rotina>(nome_rotina);
+    this->_agenda->set_rotina(nova_rotina);
     while (true) {
         std::cout << "Adicionar atividade? (1 = sim, 0 = nao): ";
         if (std::cin >> state) {
