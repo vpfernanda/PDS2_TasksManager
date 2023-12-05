@@ -15,8 +15,10 @@ O namespace "task_manager::core" inclui todas as classes essenciais para o funci
 ## Próximos passos..
 Algumas features ficaram pendentes, dentre elas as seguintes:
 - Salvar uma rotina no banco de dados e recuperá-la.
-- Salvar tarefas no banco de daos e recuperá-las.
+- Salvar tarefas no banco de dados e recuperá-las.
 - Fazer com que a Agenda salve as tarefas do ano, da mesma maneira que foi implementada os eventos.
 ## Bibliotecas e programas externos utilizados
 ### Testes
 https://github.com/doctest/doctest
+### Documentação
+https://www.doxygen.nl/manual/docblocks.html
