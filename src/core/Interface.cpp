@@ -104,20 +104,19 @@ namespace task_manager::core{
         std::cout << "Digite a data final da busca\n";
         Data data_final = obter_data();
         std::cout << "----------------------\n";
-        //procurar eventos no banco de dados no período informado
+
         std::vector<Evento> eventos = _agenda->buscar_eventos_intervalo(data_inicio, data_final);
         for (Evento ev : eventos){
             std::cout << ev.to_string();
         }
         std::cout << "----------------------\n";
-        //imprimir eventos durante o periodo - precisa da classe agenda
 
         std::cout << "\nVoltando ao menu inicial . . .\n";
     }
 
 
 
-    void Interface::imprimir_rotina()  const{ //finaliza a execução
+    void Interface::imprimir_rotina()  const{
         std::cout << _agenda->get_rotina()->to_string();
     }
 
@@ -171,8 +170,6 @@ void Interface::editar_rotina(){
             editar_rotina();
             break;
         }
-        //imprimir_rotina();
-        //std::cout <<"voce deseja remover / adicionar alguma atividade?\n";
         break;
 
         default:
@@ -184,11 +181,12 @@ void Interface::editar_rotina(){
 void Interface::adicionar_evento(){
     std::cout << "Digite o nome do evento: \n";
     std::string nome_evento;
-    std::cin >> nome_evento;
+    std::getline(std::cin >> std::ws, nome_evento);
     std::cout << "Digite a data que o evento irá ocorrer: ";
     Data data = obter_data();
     std::cout << "Digite o horário de início do evento: \n";
     Horario horario = obter_horario_evento();
+    std::cout <<"Evento " << nome_evento <<" adicionado!\n";
     Evento novo_evento = Evento(nome_evento, data, horario);
     _agenda->adiciona_evento(novo_evento);
     BancoDados bd;

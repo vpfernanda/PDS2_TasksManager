@@ -130,9 +130,9 @@ namespace task_manager::core{
     }
     std::string Rotina::to_string(){
         std::stringstream strstream;
-        if (!gerar_rotina()) strstream << "Esta rotina e impossivel\n";
+        if (!gerar_rotina()) strstream << "Rotina impossivel!!!\n";
         else{
-            strstream << setw(35) << left << "Domingo" << setw(35) << left << "Segunda" << setw(35) << left << "Terca" << setw(35) << left << "Quarta" << setw(35) << left << "Quinta" << setw(35) << left << "Sexta" << setw(35) << left << "Sábado" << "\n";
+            strstream << setw(35) << left << "Domingo" << setw(35) << left << "Segunda" << setw(35) << left << "Terca" << setw(35) << left << "Quarta" << setw(35) << left << "Quinta" << setw(35) << left << "Sexta" << setw(35) << left << "Sabado" << "\n";
             std::vector<Atividade> atividades_por_dia[7];
             for (Atividade &atv: _atividades_rotina){
                 std::vector<DIA> dias_semana_ocorre = atv.get_dias_semana();

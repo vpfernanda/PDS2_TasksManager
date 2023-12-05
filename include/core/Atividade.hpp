@@ -67,6 +67,10 @@ class Atividade{
     
     ///@brief - retorna o horario com base no input do usuario
     static Atividade criarAtividade();
+
+    /// @brief - retorna o dia da semana com base no indice
+    /// @param indice - indice do dia
+    static void dia_corresp(int indice);
     
     private:
         std::string _nome;
