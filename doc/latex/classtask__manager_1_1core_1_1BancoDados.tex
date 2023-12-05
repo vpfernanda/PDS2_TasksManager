@@ -1,0 +1,112 @@
+\hypertarget{classtask__manager_1_1core_1_1BancoDados}{}\doxysection{task\+\_\+manager\+::core\+::Banco\+Dados Class Reference}
+\label{classtask__manager_1_1core_1_1BancoDados}\index{task\_manager::core::BancoDados@{task\_manager::core::BancoDados}}
+
+
+Classe para persistência dos dados em arquivo texto.  
+
+
+
+
+{\ttfamily \#include $<$Banco\+Dados.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1BancoDados_a858f1217580a35493054f0799860ab16}\label{classtask__manager_1_1core_1_1BancoDados_a858f1217580a35493054f0799860ab16}} 
+\mbox{\hyperlink{classtask__manager_1_1core_1_1BancoDados_a858f1217580a35493054f0799860ab16}{Banco\+Dados}} ()
+\begin{DoxyCompactList}\small\item\em construtor da classe já seta os nomes dos arquivos correspondentes. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtask__manager_1_1core_1_1BancoDados_a9c434cf8c382a3d329de099311e489a8}{gravar\+\_\+rotina}} (\mbox{\hyperlink{classtask__manager_1_1core_1_1Rotina}{Rotina}} rotina, unsigned rotina\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Grava a rotina em um arquivo .txt e retorna verdadeiro ou falso a depender do sucesso da operação. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtask__manager_1_1core_1_1BancoDados_a3bf56274d984eda560d021942e79c8fa}{deletar\+\_\+rotina}} (unsigned rotina\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Limpa completamente o arquivo;. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtask__manager_1_1core_1_1BancoDados_a1bda7df63c61a1650df351ecb5d9c920}{gravar\+\_\+evento}} (\mbox{\hyperlink{classtask__manager_1_1core_1_1Evento}{Evento}} evento)
+\begin{DoxyCompactList}\small\item\em Obtém rotina gravada em um arquivo, se esta já tiver sido salva. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtask__manager_1_1core_1_1BancoDados_ab391efb2cf99ce489306f10763edcf2b}{deletar\+\_\+evento}} (std\+::string nome\+\_\+evento, std\+::string data\+\_\+evento, std\+::string horario\+\_\+evento)
+\begin{DoxyCompactList}\small\item\em Deleta um evento da lista de eventos gravados. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1BancoDados_ae993dc1441829d784c1cd45f095a6673}\label{classtask__manager_1_1core_1_1BancoDados_ae993dc1441829d784c1cd45f095a6673}} 
+bool \mbox{\hyperlink{classtask__manager_1_1core_1_1BancoDados_ae993dc1441829d784c1cd45f095a6673}{limpar\+\_\+eventos}} ()
+\begin{DoxyCompactList}\small\item\em Limpa o banco de dados de eventos em sua totalidade. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1BancoDados_ad95918feab3a7d5a7973518cf4a7088e}\label{classtask__manager_1_1core_1_1BancoDados_ad95918feab3a7d5a7973518cf4a7088e}} 
+std\+::vector$<$ \mbox{\hyperlink{classtask__manager_1_1core_1_1Evento}{Evento}} $>$ \mbox{\hyperlink{classtask__manager_1_1core_1_1BancoDados_ad95918feab3a7d5a7973518cf4a7088e}{ler\+\_\+eventos}} ()
+\begin{DoxyCompactList}\small\item\em Retorna todos os eventos salvos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe para persistência dos dados em arquivo texto. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1BancoDados_ab391efb2cf99ce489306f10763edcf2b}\label{classtask__manager_1_1core_1_1BancoDados_ab391efb2cf99ce489306f10763edcf2b}} 
+\index{task\_manager::core::BancoDados@{task\_manager::core::BancoDados}!deletar\_evento@{deletar\_evento}}
+\index{deletar\_evento@{deletar\_evento}!task\_manager::core::BancoDados@{task\_manager::core::BancoDados}}
+\doxysubsubsection{\texorpdfstring{deletar\_evento()}{deletar\_evento()}}
+{\footnotesize\ttfamily bool task\+\_\+manager\+::core\+::\+Banco\+Dados\+::deletar\+\_\+evento (\begin{DoxyParamCaption}\item[{std\+::string}]{nome\+\_\+evento,  }\item[{std\+::string}]{data\+\_\+evento,  }\item[{std\+::string}]{horario\+\_\+evento }\end{DoxyParamCaption})}
+
+
+
+Deleta um evento da lista de eventos gravados. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome\+\_\+evento} & \\
+\hline
+{\em data\+\_\+evento} & \\
+\hline
+{\em horario\+\_\+evento} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se a remoção teve sucesso, false se a remoção falhou 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1BancoDados_a3bf56274d984eda560d021942e79c8fa}\label{classtask__manager_1_1core_1_1BancoDados_a3bf56274d984eda560d021942e79c8fa}} 
+\index{task\_manager::core::BancoDados@{task\_manager::core::BancoDados}!deletar\_rotina@{deletar\_rotina}}
+\index{deletar\_rotina@{deletar\_rotina}!task\_manager::core::BancoDados@{task\_manager::core::BancoDados}}
+\doxysubsubsection{\texorpdfstring{deletar\_rotina()}{deletar\_rotina()}}
+{\footnotesize\ttfamily bool task\+\_\+manager\+::core\+::\+Banco\+Dados\+::deletar\+\_\+rotina (\begin{DoxyParamCaption}\item[{unsigned}]{rotina\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Limpa completamente o arquivo;. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rotina\+\_\+id} & identificador da rotina a ser deletada (deve ser igual a 1,2, ou 3, necessariamente) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1BancoDados_a1bda7df63c61a1650df351ecb5d9c920}\label{classtask__manager_1_1core_1_1BancoDados_a1bda7df63c61a1650df351ecb5d9c920}} 
+\index{task\_manager::core::BancoDados@{task\_manager::core::BancoDados}!gravar\_evento@{gravar\_evento}}
+\index{gravar\_evento@{gravar\_evento}!task\_manager::core::BancoDados@{task\_manager::core::BancoDados}}
+\doxysubsubsection{\texorpdfstring{gravar\_evento()}{gravar\_evento()}}
+{\footnotesize\ttfamily bool task\+\_\+manager\+::core\+::\+Banco\+Dados\+::gravar\+\_\+evento (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtask__manager_1_1core_1_1Evento}{Evento}}}]{evento }\end{DoxyParamCaption})}
+
+
+
+Obtém rotina gravada em um arquivo, se esta já tiver sido salva. 
+
+\begin{DoxyReturn}{Returns}
+Um objeto do tipo rotina.
+\end{DoxyReturn}
+grava evento em um arquivo txt 
+\begin{DoxyParams}{Parameters}
+{\em evento} & objeto tipo evento \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1BancoDados_a9c434cf8c382a3d329de099311e489a8}\label{classtask__manager_1_1core_1_1BancoDados_a9c434cf8c382a3d329de099311e489a8}} 
+\index{task\_manager::core::BancoDados@{task\_manager::core::BancoDados}!gravar\_rotina@{gravar\_rotina}}
+\index{gravar\_rotina@{gravar\_rotina}!task\_manager::core::BancoDados@{task\_manager::core::BancoDados}}
+\doxysubsubsection{\texorpdfstring{gravar\_rotina()}{gravar\_rotina()}}
+{\footnotesize\ttfamily bool task\+\_\+manager\+::core\+::\+Banco\+Dados\+::gravar\+\_\+rotina (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtask__manager_1_1core_1_1Rotina}{Rotina}}}]{rotina,  }\item[{unsigned}]{rotina\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Grava a rotina em um arquivo .txt e retorna verdadeiro ou falso a depender do sucesso da operação. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rotina} & objeto do tipo rotina \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/core/Banco\+Dados.\+hpp\end{DoxyCompactItemize}

@@ -5,10 +5,9 @@
 #include "Atividade.hpp"
 
 namespace task_manager::core{
-//!  Classe Rotina. 
-/*!
-  Classe feita para representar uma Rotina de 7 dias, organizando de maneira automatizada os horários das atividades.
-*/
+
+///@brief Classe feita para representar uma Rotina de 7 dias, organizando de maneira automatizada os horários das atividades.
+
 class Rotina{
     public:
     ///@brief - Construtor da rotina
@@ -28,14 +27,20 @@ class Rotina{
     /// @param Atividade - Atividade a ser removida do vetor
     void remover_atividade(const Atividade& Atividade);
 
-    /// @brief - organiza a rotina conforme os dias e horários 
+    /// @brief organiza a rotina conforme os dias e horários 
+    /// @return Verdadeiro ou falso.
     bool gerar_rotina();
 
-    ///@brief - retorna o vetor guardado na private _Rotina
+    /// @brief retorna o vetor guardado na private _Rotina
+    /// @return Vector de atividades.
     std::vector<Atividade> get_atividades_rotina() const;
-    ///@brief - retorna o nome da rotina (_nome)
+
+    /// @brief retorna o nome da rotina (_nome)
+    /// @return String nome da rotina.
     std::string nome() const;
-    ///@brief - forma uma string para ser impressa na tela
+
+    /// @brief forma uma string para ser impressa na tela
+    /// @return String formatada da Rotina. 
     std::string to_string();
     private:
         std::string _nome;

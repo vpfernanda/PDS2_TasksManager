@@ -1,0 +1,76 @@
+\hypertarget{classtask__manager_1_1core_1_1Agenda}{}\doxysection{task\+\_\+manager\+::core\+::Agenda Class Reference}
+\label{classtask__manager_1_1core_1_1Agenda}\index{task\_manager::core::Agenda@{task\_manager::core::Agenda}}
+
+
+Classe feita para representar uma \mbox{\hyperlink{classtask__manager_1_1core_1_1Agenda}{Agenda}}.  
+
+
+
+
+{\ttfamily \#include $<$Agenda.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Agenda_a2aa0186300c5770b15bdbc449bf35435}\label{classtask__manager_1_1core_1_1Agenda_a2aa0186300c5770b15bdbc449bf35435}} 
+\mbox{\hyperlink{classtask__manager_1_1core_1_1Agenda_a2aa0186300c5770b15bdbc449bf35435}{Agenda}} (\mbox{\hyperlink{classtask__manager_1_1core_1_1Rotina}{Rotina}} $\ast$rotina)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item construtor \mbox{\hyperlink{classtask__manager_1_1core_1_1Agenda}{Agenda}} com apenas a rotina 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Agenda_a79e6e2ba80a4a7a24b6072510ddf542e}\label{classtask__manager_1_1core_1_1Agenda_a79e6e2ba80a4a7a24b6072510ddf542e}} 
+\mbox{\hyperlink{classtask__manager_1_1core_1_1Agenda_a79e6e2ba80a4a7a24b6072510ddf542e}{Agenda}} (std\+::vector$<$ \mbox{\hyperlink{classtask__manager_1_1core_1_1Evento}{Evento}} $>$ eventos)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item construtor \mbox{\hyperlink{classtask__manager_1_1core_1_1Agenda}{Agenda}} com apenas os eventos. 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Agenda_a7aa09d22c715978bedd25f6a1484c79a}\label{classtask__manager_1_1core_1_1Agenda_a7aa09d22c715978bedd25f6a1484c79a}} 
+\mbox{\hyperlink{classtask__manager_1_1core_1_1Agenda_a7aa09d22c715978bedd25f6a1484c79a}{Agenda}} (\mbox{\hyperlink{classtask__manager_1_1core_1_1Rotina}{Rotina}} $\ast$rotina, std\+::vector$<$ \mbox{\hyperlink{classtask__manager_1_1core_1_1Evento}{Evento}} $>$ eventos)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item construtor \mbox{\hyperlink{classtask__manager_1_1core_1_1Agenda}{Agenda}} com a rotina e os eventos 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Agenda_a4673894f17e46e6dae308e375afa5a88}\label{classtask__manager_1_1core_1_1Agenda_a4673894f17e46e6dae308e375afa5a88}} 
+std\+::vector$<$ \mbox{\hyperlink{classtask__manager_1_1core_1_1Evento}{Evento}} $>$ \mbox{\hyperlink{classtask__manager_1_1core_1_1Agenda_a4673894f17e46e6dae308e375afa5a88}{buscar\+\_\+eventos\+\_\+ano}} (unsigned ano)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item método para buscar todos os eventos em um ano específico 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Agenda_a7ce0920e788d87b2ae891921066f73f8}\label{classtask__manager_1_1core_1_1Agenda_a7ce0920e788d87b2ae891921066f73f8}} 
+std\+::vector$<$ \mbox{\hyperlink{classtask__manager_1_1core_1_1Evento}{Evento}} $>$ \mbox{\hyperlink{classtask__manager_1_1core_1_1Agenda_a7ce0920e788d87b2ae891921066f73f8}{buscar\+\_\+eventos\+\_\+intervalo}} (\mbox{\hyperlink{classtask__manager_1_1core_1_1Data}{Data}} inicio, \mbox{\hyperlink{classtask__manager_1_1core_1_1Data}{Data}} fim)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item método para buscar todos os eventos em um intervalo 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Agenda_a3496b49cccb997dcb4df599da2f4d59c}\label{classtask__manager_1_1core_1_1Agenda_a3496b49cccb997dcb4df599da2f4d59c}} 
+\mbox{\hyperlink{classtask__manager_1_1core_1_1Rotina}{Rotina}} $\ast$ \mbox{\hyperlink{classtask__manager_1_1core_1_1Agenda_a3496b49cccb997dcb4df599da2f4d59c}{get\+\_\+rotina}} () const
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item Getter de rotina (\+\_\+rotina) 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Agenda_a794313b76529055a13474f50c77d99d8}\label{classtask__manager_1_1core_1_1Agenda_a794313b76529055a13474f50c77d99d8}} 
+void \mbox{\hyperlink{classtask__manager_1_1core_1_1Agenda_a794313b76529055a13474f50c77d99d8}{set\+\_\+rotina}} (\mbox{\hyperlink{classtask__manager_1_1core_1_1Rotina}{Rotina}} $\ast$rotina)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item Setter de rotina (\+\_\+rotina) 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Agenda_a508b7a2ea463e99aab20a9e762ab2f17}\label{classtask__manager_1_1core_1_1Agenda_a508b7a2ea463e99aab20a9e762ab2f17}} 
+bool \mbox{\hyperlink{classtask__manager_1_1core_1_1Agenda_a508b7a2ea463e99aab20a9e762ab2f17}{adiciona\+\_\+evento}} (\mbox{\hyperlink{classtask__manager_1_1core_1_1Evento}{Evento}} \&evento)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item Adiciona um evento a agenda 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Agenda_a5eddd4b2677fd1a69a5619a2e86fc55b}\label{classtask__manager_1_1core_1_1Agenda_a5eddd4b2677fd1a69a5619a2e86fc55b}} 
+std\+::vector$<$ \mbox{\hyperlink{classtask__manager_1_1core_1_1Evento}{Evento}} $>$ \mbox{\hyperlink{classtask__manager_1_1core_1_1Agenda_a5eddd4b2677fd1a69a5619a2e86fc55b}{get\+\_\+eventos}} ()
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item Getter de eventos 
+\end{DoxyItemize}\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe feita para representar uma \mbox{\hyperlink{classtask__manager_1_1core_1_1Agenda}{Agenda}}. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/core/Agenda.\+hpp\end{DoxyCompactItemize}

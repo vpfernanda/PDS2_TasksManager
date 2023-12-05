@@ -1,0 +1,200 @@
+\hypertarget{classtask__manager_1_1core_1_1Horario}{}\doxysection{task\+\_\+manager\+::core\+::Horario Class Reference}
+\label{classtask__manager_1_1core_1_1Horario}\index{task\_manager::core::Horario@{task\_manager::core::Horario}}
+
+
+Classe \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}} para abstração de horas e minutos.  
+
+
+
+
+{\ttfamily \#include $<$Horario.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Horario_abef345e9ed3b22d06affafe9cd9f7d15}\label{classtask__manager_1_1core_1_1Horario_abef345e9ed3b22d06affafe9cd9f7d15}} 
+\mbox{\hyperlink{classtask__manager_1_1core_1_1Horario_abef345e9ed3b22d06affafe9cd9f7d15}{Horario}} ()
+\begin{DoxyCompactList}\small\item\em Construtor default da classe \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}}. Inicializa as variaveis \+\_\+hora e \+\_\+min com valor 0. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtask__manager_1_1core_1_1Horario_aa4872b9b31bc57588820fb33d97be5cc}{Horario}} (unsigned hora, unsigned min)
+\begin{DoxyCompactList}\small\item\em Construtor da classe \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario_a0001e0dc9ac35532163fd602b9e92d5b}{operator==}} (const \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}} \&other) const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classtask__manager_1_1core_1_1Interface}{Interface}} para a implementação do operador de comparação para um objeto \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario_a5d7861b90da822eb7a849e0b2f308789}{operator$<$}} (const \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}} \&other) const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classtask__manager_1_1core_1_1Interface}{Interface}} para a implementação do operador de menor para um objeto \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario_a206e70714d35d08727264a6706011d23}{operator$>$}} (const \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}} \&other) const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classtask__manager_1_1core_1_1Interface}{Interface}} para a implementação do operador de maior para um objeto \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}} \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario_aca9c51e6e2af2ac489ffef9513fbcf38}{operator+}} (int minutos)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classtask__manager_1_1core_1_1Interface}{Interface}} para a implementação do operador de soma para um objeto \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}}. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario_a8fe94d50eb2831d9cb1a7c6469f2b11c}{get\+\_\+hora}} () const
+\begin{DoxyCompactList}\small\item\em Informa o atributo hora. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario_ab68ff39df5fe8cf1dc204c5380e3bf34}{get\+\_\+min}} () const
+\begin{DoxyCompactList}\small\item\em Informa o atributo minuto. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario_a8491e6721a7ad520ad42de5c1a138407}{to\+\_\+\+String}} () const
+\begin{DoxyCompactList}\small\item\em Realiza a conversão dos valores hora e minuto para o formato hh\+:mm. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}} \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario_a16a1f11a441124d3446826f213997aab}{calcula\+\_\+\+Duracao}} (\mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}} fim)
+\begin{DoxyCompactList}\small\item\em Faz o cálculo da duração de tempo entre dois horários. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}} para abstração de horas e minutos. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Horario_aa4872b9b31bc57588820fb33d97be5cc}\label{classtask__manager_1_1core_1_1Horario_aa4872b9b31bc57588820fb33d97be5cc}} 
+\index{task\_manager::core::Horario@{task\_manager::core::Horario}!Horario@{Horario}}
+\index{Horario@{Horario}!task\_manager::core::Horario@{task\_manager::core::Horario}}
+\doxysubsubsection{\texorpdfstring{Horario()}{Horario()}}
+{\footnotesize\ttfamily task\+\_\+manager\+::core\+::\+Horario\+::\+Horario (\begin{DoxyParamCaption}\item[{unsigned}]{hora,  }\item[{unsigned}]{min }\end{DoxyParamCaption})}
+
+
+
+Construtor da classe \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hora} & Valor numérico representando a hora. \\
+\hline
+{\em min} & Valor numérico representando minuto. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Horario_a16a1f11a441124d3446826f213997aab}\label{classtask__manager_1_1core_1_1Horario_a16a1f11a441124d3446826f213997aab}} 
+\index{task\_manager::core::Horario@{task\_manager::core::Horario}!calcula\_Duracao@{calcula\_Duracao}}
+\index{calcula\_Duracao@{calcula\_Duracao}!task\_manager::core::Horario@{task\_manager::core::Horario}}
+\doxysubsubsection{\texorpdfstring{calcula\_Duracao()}{calcula\_Duracao()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}} task\+\_\+manager\+::core\+::\+Horario\+::calcula\+\_\+\+Duracao (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}}}]{fim }\end{DoxyParamCaption})}
+
+
+
+Faz o cálculo da duração de tempo entre dois horários. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inicio} & \\
+\hline
+{\em fim} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna um objeto horario com a duração correspondente. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Horario_a8fe94d50eb2831d9cb1a7c6469f2b11c}\label{classtask__manager_1_1core_1_1Horario_a8fe94d50eb2831d9cb1a7c6469f2b11c}} 
+\index{task\_manager::core::Horario@{task\_manager::core::Horario}!get\_hora@{get\_hora}}
+\index{get\_hora@{get\_hora}!task\_manager::core::Horario@{task\_manager::core::Horario}}
+\doxysubsubsection{\texorpdfstring{get\_hora()}{get\_hora()}}
+{\footnotesize\ttfamily unsigned task\+\_\+manager\+::core\+::\+Horario\+::get\+\_\+hora (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Informa o atributo hora. 
+
+\begin{DoxyReturn}{Returns}
+Retorna o valor de \+\_\+hora. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Horario_ab68ff39df5fe8cf1dc204c5380e3bf34}\label{classtask__manager_1_1core_1_1Horario_ab68ff39df5fe8cf1dc204c5380e3bf34}} 
+\index{task\_manager::core::Horario@{task\_manager::core::Horario}!get\_min@{get\_min}}
+\index{get\_min@{get\_min}!task\_manager::core::Horario@{task\_manager::core::Horario}}
+\doxysubsubsection{\texorpdfstring{get\_min()}{get\_min()}}
+{\footnotesize\ttfamily unsigned task\+\_\+manager\+::core\+::\+Horario\+::get\+\_\+min (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Informa o atributo minuto. 
+
+\begin{DoxyReturn}{Returns}
+Retorna o valor de \+\_\+min. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Horario_aca9c51e6e2af2ac489ffef9513fbcf38}\label{classtask__manager_1_1core_1_1Horario_aca9c51e6e2af2ac489ffef9513fbcf38}} 
+\index{task\_manager::core::Horario@{task\_manager::core::Horario}!operator+@{operator+}}
+\index{operator+@{operator+}!task\_manager::core::Horario@{task\_manager::core::Horario}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}} task\+\_\+manager\+::core\+::\+Horario\+::operator+ (\begin{DoxyParamCaption}\item[{int}]{minutos }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classtask__manager_1_1core_1_1Interface}{Interface}} para a implementação do operador de soma para um objeto \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Novo horário com os minutos ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Horario_a5d7861b90da822eb7a849e0b2f308789}\label{classtask__manager_1_1core_1_1Horario_a5d7861b90da822eb7a849e0b2f308789}} 
+\index{task\_manager::core::Horario@{task\_manager::core::Horario}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!task\_manager::core::Horario@{task\_manager::core::Horario}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool task\+\_\+manager\+::core\+::\+Horario\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classtask__manager_1_1core_1_1Interface}{Interface}} para a implementação do operador de menor para um objeto \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+verdadeiro ou falso. ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Horario_a0001e0dc9ac35532163fd602b9e92d5b}\label{classtask__manager_1_1core_1_1Horario_a0001e0dc9ac35532163fd602b9e92d5b}} 
+\index{task\_manager::core::Horario@{task\_manager::core::Horario}!operator==@{operator==}}
+\index{operator==@{operator==}!task\_manager::core::Horario@{task\_manager::core::Horario}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool task\+\_\+manager\+::core\+::\+Horario\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classtask__manager_1_1core_1_1Interface}{Interface}} para a implementação do operador de comparação para um objeto \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+verdadeiro ou falso 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Horario_a206e70714d35d08727264a6706011d23}\label{classtask__manager_1_1core_1_1Horario_a206e70714d35d08727264a6706011d23}} 
+\index{task\_manager::core::Horario@{task\_manager::core::Horario}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!task\_manager::core::Horario@{task\_manager::core::Horario}}
+\doxysubsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily bool task\+\_\+manager\+::core\+::\+Horario\+::operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classtask__manager_1_1core_1_1Interface}{Interface}} para a implementação do operador de maior para um objeto \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+verdadeiro ou falso. ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Horario_a8491e6721a7ad520ad42de5c1a138407}\label{classtask__manager_1_1core_1_1Horario_a8491e6721a7ad520ad42de5c1a138407}} 
+\index{task\_manager::core::Horario@{task\_manager::core::Horario}!to\_String@{to\_String}}
+\index{to\_String@{to\_String}!task\_manager::core::Horario@{task\_manager::core::Horario}}
+\doxysubsubsection{\texorpdfstring{to\_String()}{to\_String()}}
+{\footnotesize\ttfamily std\+::string task\+\_\+manager\+::core\+::\+Horario\+::to\+\_\+\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Realiza a conversão dos valores hora e minuto para o formato hh\+:mm. 
+
+\begin{DoxyReturn}{Returns}
+Retorna uma string de horario no formato \char`\"{}hh\+:mm\char`\"{} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/core/Horario.\+hpp\end{DoxyCompactItemize}

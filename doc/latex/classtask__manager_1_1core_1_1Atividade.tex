@@ -1,0 +1,333 @@
+\hypertarget{classtask__manager_1_1core_1_1Atividade}{}\doxysection{task\+\_\+manager\+::core\+::Atividade Class Reference}
+\label{classtask__manager_1_1core_1_1Atividade}\index{task\_manager::core::Atividade@{task\_manager::core::Atividade}}
+
+
+Classe feita para representar uma \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade}{Atividade}}, que pode ter um horário fixo ou livre. Dependendo de qual o construtor usado será diferente.  
+
+
+
+
+{\ttfamily \#include $<$Atividade.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade_a4fe48fd8ee3535d8070ab63f8d40d84c}{Atividade}} (std\+::string nome, TIPO\+\_\+\+HORARIO tipo\+\_\+horario, TURNO\+\_\+\+PREFERENCIA turno\+\_\+preferencia, unsigned duracao\+\_\+minutos, std\+::vector$<$ DIA $>$ dias\+\_\+semana)
+\begin{DoxyCompactList}\small\item\em construtor \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade}{Atividade}} com horário livre \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade_a39ef8b1e2eda3056e97a812bb1266294}{Atividade}} (std\+::string nome, TIPO\+\_\+\+HORARIO tipo\+\_\+horario, \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}} inicio, \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}} fim, std\+::vector$<$ DIA $>$ dias\+\_\+semana)
+\begin{DoxyCompactList}\small\item\em construtor \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade}{Atividade}} com horário fixo \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade_ae3601c478f08d350a539b37f0a199c8f}{operator==}} (const \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade}{Atividade}} \&other) const
+\begin{DoxyCompactList}\small\item\em implementação comparação entre atividades \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade_abc49780fdbf7af1db455a30603e845a0}{get\+\_\+nome}} () const
+\begin{DoxyCompactList}\small\item\em recupera o nome da atividade (\+\_\+nome) \end{DoxyCompactList}\item 
+TIPO\+\_\+\+HORARIO \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade_ac2c4f8d4d320e653566363407e039391}{get\+\_\+tipo\+\_\+horario}} () const
+\begin{DoxyCompactList}\small\item\em recupera o horário da atividade (\+\_\+horario) \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade_a03381030325d402c19791c5f9461d75d}{get\+\_\+duracao}} () const
+\begin{DoxyCompactList}\small\item\em recupera a duração atividade (\+\_\+horario) \end{DoxyCompactList}\item 
+std\+::vector$<$ DIA $>$ \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade_acb7db882cd808628d143d803dcf644bc}{get\+\_\+dias\+\_\+semana}} () const
+\begin{DoxyCompactList}\small\item\em recupera o dia da atividade a ser checada (\+\_\+dia\+\_\+semana) \end{DoxyCompactList}\item 
+TURNO\+\_\+\+PREFERENCIA \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade_a2e139e6a9b280c7c91c14d524a94805c}{get\+\_\+turno}} () const
+\begin{DoxyCompactList}\small\item\em recupera o turno de preferencia da atividade (\+\_\+turno\+\_\+preferencia) ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}} \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade_a215e07574778283277f89c47f37910c4}{get\+\_\+horario\+\_\+inicio}} () const
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item recupera o horário de inicio da atividade 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}} \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade_ab9ad8b16b7d52fe5b39f4b5fc433e69c}{get\+\_\+horario\+\_\+fim}} () const
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item recupera o horário de termino da atividade 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Atividade_afe7962f09e1539c508aa801089e61a69}\label{classtask__manager_1_1core_1_1Atividade_afe7962f09e1539c508aa801089e61a69}} 
+void \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade_afe7962f09e1539c508aa801089e61a69}{set\+\_\+horario\+\_\+inicio}} (\mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}} inicio)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item set o novo horário de inicio 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Atividade_a5545474116015ec031c2e81ef7fb5e54}\label{classtask__manager_1_1core_1_1Atividade_a5545474116015ec031c2e81ef7fb5e54}} 
+void \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade_a5545474116015ec031c2e81ef7fb5e54}{set\+\_\+horario\+\_\+fim}} (\mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}} fim)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item set o novo horário de fim 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade_ad39efe30fd01193ea0c6a0ac06676157}{to\+\_\+string}} () const
+\begin{DoxyCompactList}\small\item\em Devolve o objeto em formato de string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade_a52859ea290d194117f580cf057aa28e4}{sort\+\_\+dia}} (std\+::vector$<$ DIA $>$ \&dias)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item organiza o vetor de dias da semana 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade_ab7725b8bb2a1165aabbe1f77cba80057}{comparar\+\_\+atividades}} (const \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade}{Atividade}} \&a, const \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade}{Atividade}} \&b)
+\begin{DoxyCompactList}\small\item\em compara atividades diferentes conforme a sua ordem (dia e turno) \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade}{Atividade}} \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade_ac4d4c8ee28e8b04d33fd3a92cc49cb34}{criar\+Atividade}} ()
+\begin{DoxyCompactList}\small\item\em retorna o horario com base no input do usuario \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade_a4e072349eae58421b0b2644eae067537}{dia\+\_\+corresp}} (int indice)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item retorna o dia da semana com base no indice 
+\end{DoxyItemize}\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe feita para representar uma \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade}{Atividade}}, que pode ter um horário fixo ou livre. Dependendo de qual o construtor usado será diferente. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Atividade_a4fe48fd8ee3535d8070ab63f8d40d84c}\label{classtask__manager_1_1core_1_1Atividade_a4fe48fd8ee3535d8070ab63f8d40d84c}} 
+\index{task\_manager::core::Atividade@{task\_manager::core::Atividade}!Atividade@{Atividade}}
+\index{Atividade@{Atividade}!task\_manager::core::Atividade@{task\_manager::core::Atividade}}
+\doxysubsubsection{\texorpdfstring{Atividade()}{Atividade()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily task\+\_\+manager\+::core\+::\+Atividade\+::\+Atividade (\begin{DoxyParamCaption}\item[{std\+::string}]{nome,  }\item[{TIPO\+\_\+\+HORARIO}]{tipo\+\_\+horario,  }\item[{TURNO\+\_\+\+PREFERENCIA}]{turno\+\_\+preferencia,  }\item[{unsigned}]{duracao\+\_\+minutos,  }\item[{std\+::vector$<$ DIA $>$}]{dias\+\_\+semana }\end{DoxyParamCaption})}
+
+
+
+construtor \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade}{Atividade}} com horário livre 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome} & \\
+\hline
+{\em tipo\+\_\+horario} & \\
+\hline
+{\em turno\+\_\+preferencia} & \\
+\hline
+{\em duracao\+\_\+minutos} & \\
+\hline
+{\em dias\+\_\+semana} & ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Atividade_a39ef8b1e2eda3056e97a812bb1266294}\label{classtask__manager_1_1core_1_1Atividade_a39ef8b1e2eda3056e97a812bb1266294}} 
+\index{task\_manager::core::Atividade@{task\_manager::core::Atividade}!Atividade@{Atividade}}
+\index{Atividade@{Atividade}!task\_manager::core::Atividade@{task\_manager::core::Atividade}}
+\doxysubsubsection{\texorpdfstring{Atividade()}{Atividade()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily task\+\_\+manager\+::core\+::\+Atividade\+::\+Atividade (\begin{DoxyParamCaption}\item[{std\+::string}]{nome,  }\item[{TIPO\+\_\+\+HORARIO}]{tipo\+\_\+horario,  }\item[{\mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}}}]{inicio,  }\item[{\mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}}}]{fim,  }\item[{std\+::vector$<$ DIA $>$}]{dias\+\_\+semana }\end{DoxyParamCaption})}
+
+
+
+construtor \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade}{Atividade}} com horário fixo 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome} & \\
+\hline
+{\em tipo\+\_\+horario} & \\
+\hline
+{\em inicio} & \\
+\hline
+{\em fim} & \\
+\hline
+{\em dias\+\_\+semana} & ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Atividade_ab7725b8bb2a1165aabbe1f77cba80057}\label{classtask__manager_1_1core_1_1Atividade_ab7725b8bb2a1165aabbe1f77cba80057}} 
+\index{task\_manager::core::Atividade@{task\_manager::core::Atividade}!comparar\_atividades@{comparar\_atividades}}
+\index{comparar\_atividades@{comparar\_atividades}!task\_manager::core::Atividade@{task\_manager::core::Atividade}}
+\doxysubsubsection{\texorpdfstring{comparar\_atividades()}{comparar\_atividades()}}
+{\footnotesize\ttfamily static bool task\+\_\+manager\+::core\+::\+Atividade\+::comparar\+\_\+atividades (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade}{Atividade}} \&}]{a,  }\item[{const \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade}{Atividade}} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+compara atividades diferentes conforme a sua ordem (dia e turno) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \\
+\hline
+{\em b} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Verdadeiro ou falso. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Atividade_ac4d4c8ee28e8b04d33fd3a92cc49cb34}\label{classtask__manager_1_1core_1_1Atividade_ac4d4c8ee28e8b04d33fd3a92cc49cb34}} 
+\index{task\_manager::core::Atividade@{task\_manager::core::Atividade}!criarAtividade@{criarAtividade}}
+\index{criarAtividade@{criarAtividade}!task\_manager::core::Atividade@{task\_manager::core::Atividade}}
+\doxysubsubsection{\texorpdfstring{criarAtividade()}{criarAtividade()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade}{Atividade}} task\+\_\+manager\+::core\+::\+Atividade\+::criar\+Atividade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+retorna o horario com base no input do usuario 
+
+\begin{DoxyReturn}{Returns}
+Objeto \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade}{Atividade}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Atividade_a4e072349eae58421b0b2644eae067537}\label{classtask__manager_1_1core_1_1Atividade_a4e072349eae58421b0b2644eae067537}} 
+\index{task\_manager::core::Atividade@{task\_manager::core::Atividade}!dia\_corresp@{dia\_corresp}}
+\index{dia\_corresp@{dia\_corresp}!task\_manager::core::Atividade@{task\_manager::core::Atividade}}
+\doxysubsubsection{\texorpdfstring{dia\_corresp()}{dia\_corresp()}}
+{\footnotesize\ttfamily static void task\+\_\+manager\+::core\+::\+Atividade\+::dia\+\_\+corresp (\begin{DoxyParamCaption}\item[{int}]{indice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+
+\begin{DoxyItemize}
+\item retorna o dia da semana com base no indice 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em indice} & -\/ indice do dia \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Atividade_acb7db882cd808628d143d803dcf644bc}\label{classtask__manager_1_1core_1_1Atividade_acb7db882cd808628d143d803dcf644bc}} 
+\index{task\_manager::core::Atividade@{task\_manager::core::Atividade}!get\_dias\_semana@{get\_dias\_semana}}
+\index{get\_dias\_semana@{get\_dias\_semana}!task\_manager::core::Atividade@{task\_manager::core::Atividade}}
+\doxysubsubsection{\texorpdfstring{get\_dias\_semana()}{get\_dias\_semana()}}
+{\footnotesize\ttfamily std\+::vector$<$DIA$>$ task\+\_\+manager\+::core\+::\+Atividade\+::get\+\_\+dias\+\_\+semana (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+recupera o dia da atividade a ser checada (\+\_\+dia\+\_\+semana) 
+
+\begin{DoxyReturn}{Returns}
+Vetor de dias com dias da semana. ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Atividade_a03381030325d402c19791c5f9461d75d}\label{classtask__manager_1_1core_1_1Atividade_a03381030325d402c19791c5f9461d75d}} 
+\index{task\_manager::core::Atividade@{task\_manager::core::Atividade}!get\_duracao@{get\_duracao}}
+\index{get\_duracao@{get\_duracao}!task\_manager::core::Atividade@{task\_manager::core::Atividade}}
+\doxysubsubsection{\texorpdfstring{get\_duracao()}{get\_duracao()}}
+{\footnotesize\ttfamily unsigned task\+\_\+manager\+::core\+::\+Atividade\+::get\+\_\+duracao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+recupera a duração atividade (\+\_\+horario) 
+
+\begin{DoxyReturn}{Returns}
+Retorna a duração \+\_\+horario. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Atividade_ab9ad8b16b7d52fe5b39f4b5fc433e69c}\label{classtask__manager_1_1core_1_1Atividade_ab9ad8b16b7d52fe5b39f4b5fc433e69c}} 
+\index{task\_manager::core::Atividade@{task\_manager::core::Atividade}!get\_horario\_fim@{get\_horario\_fim}}
+\index{get\_horario\_fim@{get\_horario\_fim}!task\_manager::core::Atividade@{task\_manager::core::Atividade}}
+\doxysubsubsection{\texorpdfstring{get\_horario\_fim()}{get\_horario\_fim()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}} task\+\_\+manager\+::core\+::\+Atividade\+::get\+\_\+horario\+\_\+fim (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+
+\begin{DoxyItemize}
+\item recupera o horário de termino da atividade 
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+objeto do tipo \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Atividade_a215e07574778283277f89c47f37910c4}\label{classtask__manager_1_1core_1_1Atividade_a215e07574778283277f89c47f37910c4}} 
+\index{task\_manager::core::Atividade@{task\_manager::core::Atividade}!get\_horario\_inicio@{get\_horario\_inicio}}
+\index{get\_horario\_inicio@{get\_horario\_inicio}!task\_manager::core::Atividade@{task\_manager::core::Atividade}}
+\doxysubsubsection{\texorpdfstring{get\_horario\_inicio()}{get\_horario\_inicio()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}} task\+\_\+manager\+::core\+::\+Atividade\+::get\+\_\+horario\+\_\+inicio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+
+\begin{DoxyItemize}
+\item recupera o horário de inicio da atividade 
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+objeto do tipo \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Atividade_abc49780fdbf7af1db455a30603e845a0}\label{classtask__manager_1_1core_1_1Atividade_abc49780fdbf7af1db455a30603e845a0}} 
+\index{task\_manager::core::Atividade@{task\_manager::core::Atividade}!get\_nome@{get\_nome}}
+\index{get\_nome@{get\_nome}!task\_manager::core::Atividade@{task\_manager::core::Atividade}}
+\doxysubsubsection{\texorpdfstring{get\_nome()}{get\_nome()}}
+{\footnotesize\ttfamily std\+::string task\+\_\+manager\+::core\+::\+Atividade\+::get\+\_\+nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+recupera o nome da atividade (\+\_\+nome) 
+
+\begin{DoxyReturn}{Returns}
+String com o valor de \+\_\+nome. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Atividade_ac2c4f8d4d320e653566363407e039391}\label{classtask__manager_1_1core_1_1Atividade_ac2c4f8d4d320e653566363407e039391}} 
+\index{task\_manager::core::Atividade@{task\_manager::core::Atividade}!get\_tipo\_horario@{get\_tipo\_horario}}
+\index{get\_tipo\_horario@{get\_tipo\_horario}!task\_manager::core::Atividade@{task\_manager::core::Atividade}}
+\doxysubsubsection{\texorpdfstring{get\_tipo\_horario()}{get\_tipo\_horario()}}
+{\footnotesize\ttfamily TIPO\+\_\+\+HORARIO task\+\_\+manager\+::core\+::\+Atividade\+::get\+\_\+tipo\+\_\+horario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+recupera o horário da atividade (\+\_\+horario) 
+
+\begin{DoxyReturn}{Returns}
+Retorna \+\_\+horario. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Atividade_a2e139e6a9b280c7c91c14d524a94805c}\label{classtask__manager_1_1core_1_1Atividade_a2e139e6a9b280c7c91c14d524a94805c}} 
+\index{task\_manager::core::Atividade@{task\_manager::core::Atividade}!get\_turno@{get\_turno}}
+\index{get\_turno@{get\_turno}!task\_manager::core::Atividade@{task\_manager::core::Atividade}}
+\doxysubsubsection{\texorpdfstring{get\_turno()}{get\_turno()}}
+{\footnotesize\ttfamily TURNO\+\_\+\+PREFERENCIA task\+\_\+manager\+::core\+::\+Atividade\+::get\+\_\+turno (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+recupera o turno de preferencia da atividade (\+\_\+turno\+\_\+preferencia) ~\newline
+ 
+
+\begin{DoxyReturn}{Returns}
+Retorna o turno de preferência. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Atividade_ae3601c478f08d350a539b37f0a199c8f}\label{classtask__manager_1_1core_1_1Atividade_ae3601c478f08d350a539b37f0a199c8f}} 
+\index{task\_manager::core::Atividade@{task\_manager::core::Atividade}!operator==@{operator==}}
+\index{operator==@{operator==}!task\_manager::core::Atividade@{task\_manager::core::Atividade}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool task\+\_\+manager\+::core\+::\+Atividade\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade}{Atividade}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+implementação comparação entre atividades 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Verdadeiro ou falso. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Atividade_a52859ea290d194117f580cf057aa28e4}\label{classtask__manager_1_1core_1_1Atividade_a52859ea290d194117f580cf057aa28e4}} 
+\index{task\_manager::core::Atividade@{task\_manager::core::Atividade}!sort\_dia@{sort\_dia}}
+\index{sort\_dia@{sort\_dia}!task\_manager::core::Atividade@{task\_manager::core::Atividade}}
+\doxysubsubsection{\texorpdfstring{sort\_dia()}{sort\_dia()}}
+{\footnotesize\ttfamily static void task\+\_\+manager\+::core\+::\+Atividade\+::sort\+\_\+dia (\begin{DoxyParamCaption}\item[{std\+::vector$<$ DIA $>$ \&}]{dias }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+
+\begin{DoxyItemize}
+\item organiza o vetor de dias da semana 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em dias} & -\/ vetor a ser organizado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Atividade_ad39efe30fd01193ea0c6a0ac06676157}\label{classtask__manager_1_1core_1_1Atividade_ad39efe30fd01193ea0c6a0ac06676157}} 
+\index{task\_manager::core::Atividade@{task\_manager::core::Atividade}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!task\_manager::core::Atividade@{task\_manager::core::Atividade}}
+\doxysubsubsection{\texorpdfstring{to\_string()}{to\_string()}}
+{\footnotesize\ttfamily std\+::string task\+\_\+manager\+::core\+::\+Atividade\+::to\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Devolve o objeto em formato de string. 
+
+\begin{DoxyReturn}{Returns}
+Retorna uma string formatada do objeto. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/core/Atividade.\+hpp\end{DoxyCompactItemize}

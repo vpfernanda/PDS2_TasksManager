@@ -1,0 +1,172 @@
+\hypertarget{classtask__manager_1_1core_1_1Evento}{}\doxysection{task\+\_\+manager\+::core\+::Evento Class Reference}
+\label{classtask__manager_1_1core_1_1Evento}\index{task\_manager::core::Evento@{task\_manager::core::Evento}}
+
+
+Classe feita para representar um \mbox{\hyperlink{classtask__manager_1_1core_1_1Evento}{Evento}}, que tem data e horário de início.  
+
+
+
+
+{\ttfamily \#include $<$Evento.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Evento_a3a1791871695d97d203985eb93da5bce}\label{classtask__manager_1_1core_1_1Evento_a3a1791871695d97d203985eb93da5bce}} 
+\mbox{\hyperlink{classtask__manager_1_1core_1_1Evento_a3a1791871695d97d203985eb93da5bce}{Evento}} (std\+::string nome, \mbox{\hyperlink{classtask__manager_1_1core_1_1Data}{Data}} data, \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}} horario\+\_\+inicio)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item Construtor da classe evento 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtask__manager_1_1core_1_1Evento_ab61116699287fd7e076426b4e986aaca}{operator==}} (const \mbox{\hyperlink{classtask__manager_1_1core_1_1Evento}{Evento}} \&other) const
+\begin{DoxyCompactList}\small\item\em Implementação do operador de igualdade. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtask__manager_1_1core_1_1Evento_a7b89c0116c3c8bd6818854e0f7b1dc2c}{operator$<$}} (const \mbox{\hyperlink{classtask__manager_1_1core_1_1Evento}{Evento}} \&other) const
+\begin{DoxyCompactList}\small\item\em Implementação do operador de menor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtask__manager_1_1core_1_1Evento_ac7533b3bdfbd0db4cb5815bb0aabba5c}{operator$>$}} (const \mbox{\hyperlink{classtask__manager_1_1core_1_1Evento}{Evento}} \&other) const
+\begin{DoxyCompactList}\small\item\em Implementação do operador de maior. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classtask__manager_1_1core_1_1Evento_a4f0a19ec272d658d2c73224a3dd68861}{to\+\_\+string}} () const
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item Método to\+\_\+string para imprimir o objeto. 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classtask__manager_1_1core_1_1Evento_a8575ad9800da7d7fd202e508034bfa28}{to\+\_\+string\+\_\+bd}} () const
+\begin{DoxyCompactList}\small\item\em Método \char`\"{}to\+\_\+string\char`\"{} específico para gravação no banco de dados. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classtask__manager_1_1core_1_1Evento_aab260ca77db2520265ab77ccea4d7ec1}{get\+\_\+nome}} () const
+\begin{DoxyCompactList}\small\item\em Getter do nome (\+\_\+nome) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtask__manager_1_1core_1_1Data}{Data}} \mbox{\hyperlink{classtask__manager_1_1core_1_1Evento_a7f98bdc339f184e346b4620a6eca626e}{get\+\_\+data}} () const
+\begin{DoxyCompactList}\small\item\em Getter da data (\+\_\+data) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}} \mbox{\hyperlink{classtask__manager_1_1core_1_1Evento_ae87ca6002d32a6fbf8b658baa234ec4d}{get\+\_\+horario}} () const
+\begin{DoxyCompactList}\small\item\em Getter do horario (\+\_\+horario) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe feita para representar um \mbox{\hyperlink{classtask__manager_1_1core_1_1Evento}{Evento}}, que tem data e horário de início. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Evento_a7f98bdc339f184e346b4620a6eca626e}\label{classtask__manager_1_1core_1_1Evento_a7f98bdc339f184e346b4620a6eca626e}} 
+\index{task\_manager::core::Evento@{task\_manager::core::Evento}!get\_data@{get\_data}}
+\index{get\_data@{get\_data}!task\_manager::core::Evento@{task\_manager::core::Evento}}
+\doxysubsubsection{\texorpdfstring{get\_data()}{get\_data()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtask__manager_1_1core_1_1Data}{Data}} task\+\_\+manager\+::core\+::\+Evento\+::get\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter da data (\+\_\+data) 
+
+\begin{DoxyReturn}{Returns}
+Objeto \mbox{\hyperlink{classtask__manager_1_1core_1_1Data}{Data}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Evento_ae87ca6002d32a6fbf8b658baa234ec4d}\label{classtask__manager_1_1core_1_1Evento_ae87ca6002d32a6fbf8b658baa234ec4d}} 
+\index{task\_manager::core::Evento@{task\_manager::core::Evento}!get\_horario@{get\_horario}}
+\index{get\_horario@{get\_horario}!task\_manager::core::Evento@{task\_manager::core::Evento}}
+\doxysubsubsection{\texorpdfstring{get\_horario()}{get\_horario()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}} task\+\_\+manager\+::core\+::\+Evento\+::get\+\_\+horario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter do horario (\+\_\+horario) 
+
+\begin{DoxyReturn}{Returns}
+Objeto \mbox{\hyperlink{classtask__manager_1_1core_1_1Horario}{Horario}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Evento_aab260ca77db2520265ab77ccea4d7ec1}\label{classtask__manager_1_1core_1_1Evento_aab260ca77db2520265ab77ccea4d7ec1}} 
+\index{task\_manager::core::Evento@{task\_manager::core::Evento}!get\_nome@{get\_nome}}
+\index{get\_nome@{get\_nome}!task\_manager::core::Evento@{task\_manager::core::Evento}}
+\doxysubsubsection{\texorpdfstring{get\_nome()}{get\_nome()}}
+{\footnotesize\ttfamily std\+::string task\+\_\+manager\+::core\+::\+Evento\+::get\+\_\+nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter do nome (\+\_\+nome) 
+
+\begin{DoxyReturn}{Returns}
+String de \+\_\+nome 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Evento_a7b89c0116c3c8bd6818854e0f7b1dc2c}\label{classtask__manager_1_1core_1_1Evento_a7b89c0116c3c8bd6818854e0f7b1dc2c}} 
+\index{task\_manager::core::Evento@{task\_manager::core::Evento}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!task\_manager::core::Evento@{task\_manager::core::Evento}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool task\+\_\+manager\+::core\+::\+Evento\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtask__manager_1_1core_1_1Evento}{Evento}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Implementação do operador de menor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Verdadeiro ou falso. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Evento_ab61116699287fd7e076426b4e986aaca}\label{classtask__manager_1_1core_1_1Evento_ab61116699287fd7e076426b4e986aaca}} 
+\index{task\_manager::core::Evento@{task\_manager::core::Evento}!operator==@{operator==}}
+\index{operator==@{operator==}!task\_manager::core::Evento@{task\_manager::core::Evento}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool task\+\_\+manager\+::core\+::\+Evento\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtask__manager_1_1core_1_1Evento}{Evento}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Implementação do operador de igualdade. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Verdadeiro ou falso. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Evento_ac7533b3bdfbd0db4cb5815bb0aabba5c}\label{classtask__manager_1_1core_1_1Evento_ac7533b3bdfbd0db4cb5815bb0aabba5c}} 
+\index{task\_manager::core::Evento@{task\_manager::core::Evento}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!task\_manager::core::Evento@{task\_manager::core::Evento}}
+\doxysubsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily bool task\+\_\+manager\+::core\+::\+Evento\+::operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtask__manager_1_1core_1_1Evento}{Evento}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Implementação do operador de maior. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Verdadeiro ou falso. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Evento_a4f0a19ec272d658d2c73224a3dd68861}\label{classtask__manager_1_1core_1_1Evento_a4f0a19ec272d658d2c73224a3dd68861}} 
+\index{task\_manager::core::Evento@{task\_manager::core::Evento}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!task\_manager::core::Evento@{task\_manager::core::Evento}}
+\doxysubsubsection{\texorpdfstring{to\_string()}{to\_string()}}
+{\footnotesize\ttfamily std\+::string task\+\_\+manager\+::core\+::\+Evento\+::to\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+
+\begin{DoxyItemize}
+\item Método to\+\_\+string para imprimir o objeto. 
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+String do objeto \mbox{\hyperlink{classtask__manager_1_1core_1_1Evento}{Evento}} formatada. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Evento_a8575ad9800da7d7fd202e508034bfa28}\label{classtask__manager_1_1core_1_1Evento_a8575ad9800da7d7fd202e508034bfa28}} 
+\index{task\_manager::core::Evento@{task\_manager::core::Evento}!to\_string\_bd@{to\_string\_bd}}
+\index{to\_string\_bd@{to\_string\_bd}!task\_manager::core::Evento@{task\_manager::core::Evento}}
+\doxysubsubsection{\texorpdfstring{to\_string\_bd()}{to\_string\_bd()}}
+{\footnotesize\ttfamily std\+::string task\+\_\+manager\+::core\+::\+Evento\+::to\+\_\+string\+\_\+bd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Método \char`\"{}to\+\_\+string\char`\"{} específico para gravação no banco de dados. 
+
+\begin{DoxyReturn}{Returns}
+String formatada de modo específico para manipulação em arquivo. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/core/Evento.\+hpp\end{DoxyCompactItemize}

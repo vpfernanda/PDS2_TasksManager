@@ -1,0 +1,183 @@
+\hypertarget{classtask__manager_1_1core_1_1Rotina}{}\doxysection{task\+\_\+manager\+::core\+::Rotina Class Reference}
+\label{classtask__manager_1_1core_1_1Rotina}\index{task\_manager::core::Rotina@{task\_manager::core::Rotina}}
+
+
+Classe feita para representar uma \mbox{\hyperlink{classtask__manager_1_1core_1_1Rotina}{Rotina}} de 7 dias, organizando de maneira automatizada os horários das atividades.  
+
+
+
+
+{\ttfamily \#include $<$Rotina.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtask__manager_1_1core_1_1Rotina_ae2c6d3cb2bac07acb49ddb0e36e7b041}{Rotina}} (std\+::string \mbox{\hyperlink{classtask__manager_1_1core_1_1Rotina_ab06e6072af911484675603dbab0e27fa}{nome}})
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item Construtor da rotina 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtask__manager_1_1core_1_1Rotina_a9a261938a5c187bcffa58ab3dfbdb793}{Rotina}} (std\+::string \mbox{\hyperlink{classtask__manager_1_1core_1_1Rotina_ab06e6072af911484675603dbab0e27fa}{nome}}, std\+::vector$<$ \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade}{Atividade}} $>$ atividades\+\_\+da\+\_\+rotina)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item Construtor da rotina 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtask__manager_1_1core_1_1Rotina_ac882d634a91f005c1dddef5016189711}{adicionar\+\_\+atividade}} (const \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade}{Atividade}} \&\mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade}{Atividade}})
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item adiciona uma atividade ao vetor \+\_\+\+Rotina (se não existir) 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtask__manager_1_1core_1_1Rotina_a6b5f016eb31ce811e83c34cd8cd65aa3}{remover\+\_\+atividade}} (const \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade}{Atividade}} \&\mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade}{Atividade}})
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item remove a atividade do vetor \+\_\+\+Rotina (se existir) 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtask__manager_1_1core_1_1Rotina_ac8265b757d12593922e9a76089d39808}{gerar\+\_\+rotina}} ()
+\begin{DoxyCompactList}\small\item\em organiza a rotina conforme os dias e horários \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade}{Atividade}} $>$ \mbox{\hyperlink{classtask__manager_1_1core_1_1Rotina_a2b95da8a8fd3cc7d2dd2e791e37df507}{get\+\_\+atividades\+\_\+rotina}} () const
+\begin{DoxyCompactList}\small\item\em retorna o vetor guardado na private \+\_\+\+Rotina \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classtask__manager_1_1core_1_1Rotina_ab06e6072af911484675603dbab0e27fa}{nome}} () const
+\begin{DoxyCompactList}\small\item\em retorna o nome da rotina (\+\_\+nome) \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classtask__manager_1_1core_1_1Rotina_a3ab9972066adedf7e81eb180a5765d59}{to\+\_\+string}} ()
+\begin{DoxyCompactList}\small\item\em forma uma string para ser impressa na tela \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe feita para representar uma \mbox{\hyperlink{classtask__manager_1_1core_1_1Rotina}{Rotina}} de 7 dias, organizando de maneira automatizada os horários das atividades. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Rotina_ae2c6d3cb2bac07acb49ddb0e36e7b041}\label{classtask__manager_1_1core_1_1Rotina_ae2c6d3cb2bac07acb49ddb0e36e7b041}} 
+\index{task\_manager::core::Rotina@{task\_manager::core::Rotina}!Rotina@{Rotina}}
+\index{Rotina@{Rotina}!task\_manager::core::Rotina@{task\_manager::core::Rotina}}
+\doxysubsubsection{\texorpdfstring{Rotina()}{Rotina()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily task\+\_\+manager\+::core\+::\+Rotina\+::\+Rotina (\begin{DoxyParamCaption}\item[{std\+::string}]{nome }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+\begin{DoxyItemize}
+\item Construtor da rotina 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome} & -\/ nome da rotina \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Rotina_a9a261938a5c187bcffa58ab3dfbdb793}\label{classtask__manager_1_1core_1_1Rotina_a9a261938a5c187bcffa58ab3dfbdb793}} 
+\index{task\_manager::core::Rotina@{task\_manager::core::Rotina}!Rotina@{Rotina}}
+\index{Rotina@{Rotina}!task\_manager::core::Rotina@{task\_manager::core::Rotina}}
+\doxysubsubsection{\texorpdfstring{Rotina()}{Rotina()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily task\+\_\+manager\+::core\+::\+Rotina\+::\+Rotina (\begin{DoxyParamCaption}\item[{std\+::string}]{nome,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade}{Atividade}} $>$}]{atividades\+\_\+da\+\_\+rotina }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+\begin{DoxyItemize}
+\item Construtor da rotina 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome} & -\/ nome da rotina \\
+\hline
+{\em atividades\+\_\+da\+\_\+rotina} & -\/ vetor com as atividades da rotina \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Rotina_ac882d634a91f005c1dddef5016189711}\label{classtask__manager_1_1core_1_1Rotina_ac882d634a91f005c1dddef5016189711}} 
+\index{task\_manager::core::Rotina@{task\_manager::core::Rotina}!adicionar\_atividade@{adicionar\_atividade}}
+\index{adicionar\_atividade@{adicionar\_atividade}!task\_manager::core::Rotina@{task\_manager::core::Rotina}}
+\doxysubsubsection{\texorpdfstring{adicionar\_atividade()}{adicionar\_atividade()}}
+{\footnotesize\ttfamily void task\+\_\+manager\+::core\+::\+Rotina\+::adicionar\+\_\+atividade (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade}{Atividade}} \&}]{Atividade }\end{DoxyParamCaption})}
+
+
+
+
+\begin{DoxyItemize}
+\item adiciona uma atividade ao vetor \+\_\+\+Rotina (se não existir) 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade}{Atividade}}} & -\/ \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade}{Atividade}} a ser adicionada na rotina \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Rotina_ac8265b757d12593922e9a76089d39808}\label{classtask__manager_1_1core_1_1Rotina_ac8265b757d12593922e9a76089d39808}} 
+\index{task\_manager::core::Rotina@{task\_manager::core::Rotina}!gerar\_rotina@{gerar\_rotina}}
+\index{gerar\_rotina@{gerar\_rotina}!task\_manager::core::Rotina@{task\_manager::core::Rotina}}
+\doxysubsubsection{\texorpdfstring{gerar\_rotina()}{gerar\_rotina()}}
+{\footnotesize\ttfamily bool task\+\_\+manager\+::core\+::\+Rotina\+::gerar\+\_\+rotina (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+organiza a rotina conforme os dias e horários 
+
+\begin{DoxyReturn}{Returns}
+Verdadeiro ou falso. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Rotina_a2b95da8a8fd3cc7d2dd2e791e37df507}\label{classtask__manager_1_1core_1_1Rotina_a2b95da8a8fd3cc7d2dd2e791e37df507}} 
+\index{task\_manager::core::Rotina@{task\_manager::core::Rotina}!get\_atividades\_rotina@{get\_atividades\_rotina}}
+\index{get\_atividades\_rotina@{get\_atividades\_rotina}!task\_manager::core::Rotina@{task\_manager::core::Rotina}}
+\doxysubsubsection{\texorpdfstring{get\_atividades\_rotina()}{get\_atividades\_rotina()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade}{Atividade}}$>$ task\+\_\+manager\+::core\+::\+Rotina\+::get\+\_\+atividades\+\_\+rotina (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+retorna o vetor guardado na private \+\_\+\+Rotina 
+
+\begin{DoxyReturn}{Returns}
+Vector de atividades. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Rotina_ab06e6072af911484675603dbab0e27fa}\label{classtask__manager_1_1core_1_1Rotina_ab06e6072af911484675603dbab0e27fa}} 
+\index{task\_manager::core::Rotina@{task\_manager::core::Rotina}!nome@{nome}}
+\index{nome@{nome}!task\_manager::core::Rotina@{task\_manager::core::Rotina}}
+\doxysubsubsection{\texorpdfstring{nome()}{nome()}}
+{\footnotesize\ttfamily std\+::string task\+\_\+manager\+::core\+::\+Rotina\+::nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+retorna o nome da rotina (\+\_\+nome) 
+
+\begin{DoxyReturn}{Returns}
+String nome da rotina. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Rotina_a6b5f016eb31ce811e83c34cd8cd65aa3}\label{classtask__manager_1_1core_1_1Rotina_a6b5f016eb31ce811e83c34cd8cd65aa3}} 
+\index{task\_manager::core::Rotina@{task\_manager::core::Rotina}!remover\_atividade@{remover\_atividade}}
+\index{remover\_atividade@{remover\_atividade}!task\_manager::core::Rotina@{task\_manager::core::Rotina}}
+\doxysubsubsection{\texorpdfstring{remover\_atividade()}{remover\_atividade()}}
+{\footnotesize\ttfamily void task\+\_\+manager\+::core\+::\+Rotina\+::remover\+\_\+atividade (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade}{Atividade}} \&}]{Atividade }\end{DoxyParamCaption})}
+
+
+
+
+\begin{DoxyItemize}
+\item remove a atividade do vetor \+\_\+\+Rotina (se existir) 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade}{Atividade}}} & -\/ \mbox{\hyperlink{classtask__manager_1_1core_1_1Atividade}{Atividade}} a ser removida do vetor \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Rotina_a3ab9972066adedf7e81eb180a5765d59}\label{classtask__manager_1_1core_1_1Rotina_a3ab9972066adedf7e81eb180a5765d59}} 
+\index{task\_manager::core::Rotina@{task\_manager::core::Rotina}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!task\_manager::core::Rotina@{task\_manager::core::Rotina}}
+\doxysubsubsection{\texorpdfstring{to\_string()}{to\_string()}}
+{\footnotesize\ttfamily std\+::string task\+\_\+manager\+::core\+::\+Rotina\+::to\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+forma uma string para ser impressa na tela 
+
+\begin{DoxyReturn}{Returns}
+String formatada da \mbox{\hyperlink{classtask__manager_1_1core_1_1Rotina}{Rotina}}. ~\newline
+ 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/core/Rotina.\+hpp\end{DoxyCompactItemize}

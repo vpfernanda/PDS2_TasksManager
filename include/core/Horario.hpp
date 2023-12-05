@@ -34,10 +34,12 @@ class Horario{
     /// @param other 
     /// @return verdadeiro ou falso.            
         bool operator>(const Horario& other) const;
+        
     /// @brief Interface para a implementação do operador de soma para um objeto Horario
     /// @param other 
     /// @return Novo horário com os minutos           
         Horario operator+(int minutos);
+        
     /// @brief Informa o atributo hora.
     /// @return Retorna o valor de _hora.
         unsigned get_hora() const;
