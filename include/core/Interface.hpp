@@ -27,19 +27,26 @@ class Interface{
 
     /// @brief - Imprime os eventos entre os intervalos dados pelo usuário
     void imprimir_eventos_intervalo();
+    
     /// @brief  - Adiciona um evento a agenda
     void adicionar_evento();
+    
     /// @brief Imprime a rotina atual / escolhida
     void imprimir_rotina() const;
+    
     /// @brief Cria uma rotina
     void criar_rotina();
+    
     ///@brief opcao de editar / criar a rotina do usuario
     void editar_rotina();
+    
     ///@brief Atribui uma rotina ao atributo _rotina
     ///@param agenda Ponteiro para a agenda
     void set_agenda(Agenda* agenda);
+
     ///@brief Getter da agneda
     Agenda* get_agenda() const;
+    
     private:
         Agenda* _agenda;
 };

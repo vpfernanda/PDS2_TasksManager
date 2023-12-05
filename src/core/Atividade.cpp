@@ -143,6 +143,33 @@ namespace task_manager::core {
         }
         return Horario(horas,minutos);
     }
+    void Atividade::dia_corresp(int indice){
+        switch (indice){
+        case 0:
+        std::cout<<"\nAtividade adicionada no DOMINGO!\n\n";
+        break;
+        case 1:
+        std::cout<<"\nAtividade adicionada na SEGUNDA!\n\n";
+        break;
+        case 2:
+        std::cout<<"\nAtividade adicionada na TERCA!\n\n";
+        break;
+        case 3:
+        std::cout<<"\nAtividade adicionada na QUARTA!\n\n";
+        break;
+        case 4:
+        std::cout<<"\nAtividade adicionada na QUINTA!\n\n";
+        break;
+        case 5:
+        std::cout<<"\nAtividade adicionada na SEXTA!\n\n";
+        break;
+        case 6:
+        std::cout<<"\nAtividade adicionada no SABADO!\n\n";
+        break;
+        default:
+        break;
+        }
+    }
 
     std::vector<DIA> obter_dias(){
         std::vector<DIA> dias_semana_escolhidos;
@@ -156,7 +183,7 @@ namespace task_manager::core {
 
                 if(escolha >= 0 && escolha <= 6){
                     dias_semana_escolhidos.push_back(DIA(escolha));
-                    std::cout << "adicionado no dia " << escolha << "\n";
+                    Atividade::dia_corresp(escolha);
                 }
                 else if(escolha == -1){
                     Atividade::sort_dia(dias_semana_escolhidos);
@@ -171,7 +198,6 @@ namespace task_manager::core {
             }
         }
     }
-
     TURNO_PREFERENCIA obter_turno(){
         unsigned escolha;
 
