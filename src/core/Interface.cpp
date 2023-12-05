@@ -92,7 +92,7 @@ namespace task_manager::core{
     }
 
     void Interface::imprimir_eventos_ano(unsigned ano){
-        std::vector<Evento> eventos = _agenda->get_eventos();
+        std::vector<Evento> eventos = _agenda->buscar_eventos_ano(ano);
         for (Evento ev: eventos){
             std::cout << ev.to_string();
         }
