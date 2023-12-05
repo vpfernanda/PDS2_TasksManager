@@ -7,10 +7,9 @@
 #include <memory>
 namespace task_manager::core{
 
-//!  Classe Agenda. 
-/*!
-  Classe feita para representar uma agenda
-*/
+
+///@brief Classe feita para representar uma Agenda
+
 class Agenda{
     public:
     /// @brief - construtor Agenda com apenas a rotina

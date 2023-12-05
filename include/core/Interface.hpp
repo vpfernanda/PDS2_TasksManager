@@ -6,14 +6,15 @@
 #include "Agenda.hpp"
 #include "BancoDados.hpp"
 namespace task_manager::core{
-//!  Classe Interface. 
-/*!
-  Classe feita para representar a Interface gráfica, responsável por imprimir os menus e receber os inputs do usuário.
-*/
+
+///@brief Classe feita para representar a Interface gráfica, responsável por imprimir os menus e receber os inputs do usuário.
 class Interface{
     public:
-    // @brief Construtor
+    
+    /// @brief Construtor da Classe agenda
+    /// @param agenda 
     Interface(Agenda* agenda) : _agenda(agenda){};
+
     /// @brief Imprime o menu
     void imprimir_menu();
 

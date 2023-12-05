@@ -1,0 +1,124 @@
+\hypertarget{classtask__manager_1_1core_1_1Interface}{}\doxysection{task\+\_\+manager\+::core\+::Interface Class Reference}
+\label{classtask__manager_1_1core_1_1Interface}\index{task\_manager::core::Interface@{task\_manager::core::Interface}}
+
+
+Classe feita para representar a \mbox{\hyperlink{classtask__manager_1_1core_1_1Interface}{Interface}} gráfica, responsável por imprimir os menus e receber os inputs do usuário.  
+
+
+
+
+{\ttfamily \#include $<$Interface.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtask__manager_1_1core_1_1Interface_a91d474b0c07bd5adafd2da8c93089480}{Interface}} (\mbox{\hyperlink{classtask__manager_1_1core_1_1Agenda}{Agenda}} $\ast$agenda)
+\begin{DoxyCompactList}\small\item\em Construtor da Classe agenda. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Interface_a8763afae8d68b0c99287cf9abeb95b3c}\label{classtask__manager_1_1core_1_1Interface_a8763afae8d68b0c99287cf9abeb95b3c}} 
+void \mbox{\hyperlink{classtask__manager_1_1core_1_1Interface_a8763afae8d68b0c99287cf9abeb95b3c}{imprimir\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Imprime o menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtask__manager_1_1core_1_1Interface_a1a462470389968d8088fef130970bd0c}{input\+\_\+menu}} (unsigned input)
+\begin{DoxyCompactList}\small\item\em funcao para alterar o que será impresso na tela / opcao que o usuario se encontra \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtask__manager_1_1core_1_1Interface_a3d14aee61595a6222bbcd35d30bf958f}{imprimir\+\_\+eventos\+\_\+ano}} (unsigned ano)
+\begin{DoxyCompactList}\small\item\em Imprime todos os eventos no ano escolhido. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Interface_ae33394b85d77b15c24e389c5d62540bb}\label{classtask__manager_1_1core_1_1Interface_ae33394b85d77b15c24e389c5d62540bb}} 
+void \mbox{\hyperlink{classtask__manager_1_1core_1_1Interface_ae33394b85d77b15c24e389c5d62540bb}{imprimir\+\_\+eventos\+\_\+intervalo}} ()
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item Imprime os eventos entre os intervalos dados pelo usuário 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Interface_aba58c01fca61c14c5767ce9a14ab1fc3}\label{classtask__manager_1_1core_1_1Interface_aba58c01fca61c14c5767ce9a14ab1fc3}} 
+void \mbox{\hyperlink{classtask__manager_1_1core_1_1Interface_aba58c01fca61c14c5767ce9a14ab1fc3}{adicionar\+\_\+evento}} ()
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item Adiciona um evento a agenda 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Interface_a8e90a9eca3207681cbeadada0ebf919c}\label{classtask__manager_1_1core_1_1Interface_a8e90a9eca3207681cbeadada0ebf919c}} 
+void \mbox{\hyperlink{classtask__manager_1_1core_1_1Interface_a8e90a9eca3207681cbeadada0ebf919c}{imprimir\+\_\+rotina}} () const
+\begin{DoxyCompactList}\small\item\em Imprime a rotina atual / escolhida. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Interface_a97990921857c0b556fff900b4d9350ac}\label{classtask__manager_1_1core_1_1Interface_a97990921857c0b556fff900b4d9350ac}} 
+void \mbox{\hyperlink{classtask__manager_1_1core_1_1Interface_a97990921857c0b556fff900b4d9350ac}{criar\+\_\+rotina}} ()
+\begin{DoxyCompactList}\small\item\em Cria uma rotina. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Interface_a1828d5444ce90f1508bf7a6b541c3050}\label{classtask__manager_1_1core_1_1Interface_a1828d5444ce90f1508bf7a6b541c3050}} 
+void \mbox{\hyperlink{classtask__manager_1_1core_1_1Interface_a1828d5444ce90f1508bf7a6b541c3050}{editar\+\_\+rotina}} ()
+\begin{DoxyCompactList}\small\item\em opcao de editar / criar a rotina do usuario \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtask__manager_1_1core_1_1Interface_a17412e1bd032285bca4b7689a96325dc}{set\+\_\+agenda}} (\mbox{\hyperlink{classtask__manager_1_1core_1_1Agenda}{Agenda}} $\ast$agenda)
+\begin{DoxyCompactList}\small\item\em Atribui uma rotina ao atributo \+\_\+rotina. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Interface_adf1a9d39447cdb3b6911e4fb5977095b}\label{classtask__manager_1_1core_1_1Interface_adf1a9d39447cdb3b6911e4fb5977095b}} 
+\mbox{\hyperlink{classtask__manager_1_1core_1_1Agenda}{Agenda}} $\ast$ \mbox{\hyperlink{classtask__manager_1_1core_1_1Interface_adf1a9d39447cdb3b6911e4fb5977095b}{get\+\_\+agenda}} () const
+\begin{DoxyCompactList}\small\item\em Getter da agneda. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe feita para representar a \mbox{\hyperlink{classtask__manager_1_1core_1_1Interface}{Interface}} gráfica, responsável por imprimir os menus e receber os inputs do usuário. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Interface_a91d474b0c07bd5adafd2da8c93089480}\label{classtask__manager_1_1core_1_1Interface_a91d474b0c07bd5adafd2da8c93089480}} 
+\index{task\_manager::core::Interface@{task\_manager::core::Interface}!Interface@{Interface}}
+\index{Interface@{Interface}!task\_manager::core::Interface@{task\_manager::core::Interface}}
+\doxysubsubsection{\texorpdfstring{Interface()}{Interface()}}
+{\footnotesize\ttfamily task\+\_\+manager\+::core\+::\+Interface\+::\+Interface (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtask__manager_1_1core_1_1Agenda}{Agenda}} $\ast$}]{agenda }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor da Classe agenda. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em agenda} & ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Interface_a3d14aee61595a6222bbcd35d30bf958f}\label{classtask__manager_1_1core_1_1Interface_a3d14aee61595a6222bbcd35d30bf958f}} 
+\index{task\_manager::core::Interface@{task\_manager::core::Interface}!imprimir\_eventos\_ano@{imprimir\_eventos\_ano}}
+\index{imprimir\_eventos\_ano@{imprimir\_eventos\_ano}!task\_manager::core::Interface@{task\_manager::core::Interface}}
+\doxysubsubsection{\texorpdfstring{imprimir\_eventos\_ano()}{imprimir\_eventos\_ano()}}
+{\footnotesize\ttfamily void task\+\_\+manager\+::core\+::\+Interface\+::imprimir\+\_\+eventos\+\_\+ano (\begin{DoxyParamCaption}\item[{unsigned}]{ano }\end{DoxyParamCaption})}
+
+
+
+Imprime todos os eventos no ano escolhido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ano} & representa o ano para ser feito a busca \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Interface_a1a462470389968d8088fef130970bd0c}\label{classtask__manager_1_1core_1_1Interface_a1a462470389968d8088fef130970bd0c}} 
+\index{task\_manager::core::Interface@{task\_manager::core::Interface}!input\_menu@{input\_menu}}
+\index{input\_menu@{input\_menu}!task\_manager::core::Interface@{task\_manager::core::Interface}}
+\doxysubsubsection{\texorpdfstring{input\_menu()}{input\_menu()}}
+{\footnotesize\ttfamily void task\+\_\+manager\+::core\+::\+Interface\+::input\+\_\+menu (\begin{DoxyParamCaption}\item[{unsigned}]{input }\end{DoxyParamCaption})}
+
+
+
+funcao para alterar o que será impresso na tela / opcao que o usuario se encontra 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & input do usuario (numero / opcao escolhida) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Interface_a17412e1bd032285bca4b7689a96325dc}\label{classtask__manager_1_1core_1_1Interface_a17412e1bd032285bca4b7689a96325dc}} 
+\index{task\_manager::core::Interface@{task\_manager::core::Interface}!set\_agenda@{set\_agenda}}
+\index{set\_agenda@{set\_agenda}!task\_manager::core::Interface@{task\_manager::core::Interface}}
+\doxysubsubsection{\texorpdfstring{set\_agenda()}{set\_agenda()}}
+{\footnotesize\ttfamily void task\+\_\+manager\+::core\+::\+Interface\+::set\+\_\+agenda (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtask__manager_1_1core_1_1Agenda}{Agenda}} $\ast$}]{agenda }\end{DoxyParamCaption})}
+
+
+
+Atribui uma rotina ao atributo \+\_\+rotina. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em agenda} & Ponteiro para a agenda \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/core/Interface.\+hpp\end{DoxyCompactItemize}

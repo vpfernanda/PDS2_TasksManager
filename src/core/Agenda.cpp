@@ -38,5 +38,5 @@ namespace task_manager::core {
     }
     std::vector<Evento> Agenda::get_eventos(){
         return _eventos;
-}
+    }
 }

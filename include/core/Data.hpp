@@ -2,50 +2,58 @@
 #include <string>
 namespace task_manager::core {
 
-//! Classe Data.
-/*!
-  Classe feita para representar datas (dia, mes, ano).
-*/
+/// @brief Classe feita para representar uma Data (dia, mes, ano).
 class Data {
 public:
-    //! Construtor default da classe Data.
-    /*!
-      Inicializa com dia, mes e ano iguais a zero.
-    */
+    
+    /// @brief Construtor default da classe Data. Inicializa com dia, mes e ano iguais a zero.
     Data() : _dia(0), _mes(0), _ano(0) {};
 
-    //! Construtor da classe Data.
-    /*!
-      Recebe os parametros dia, mes e ano.
-    */
+   
+    /// @brief Construtor da classe Data. Recebe os parametros dia, mes e ano.
     Data(unsigned dia, unsigned mes, unsigned ano);
 
-    //! Operador de igualdade da classe Data
-    /*!
-      Compara se dia, mês e ano são iguais
-    */
+    
+    /// @brief Implementa o operador de igualdade da classe Data. Compara se dia, mês e ano são iguais.
+    /// @param other 
+    /// @return Verdadeiro ou falso.
     bool operator==(const Data& other) const;
 
-    //! Operador de menor da classe Data
-    /*!
-      Compara se a data atual é menor que a outra data
-    */
+    /// @brief Implementação do operador de menor da classe Data. Compara se a data atual é menor que a outra data
+    /// @param other 
+    /// @return Verdadeiro ou falso.
     bool operator<(const Data& other) const;
 
-    //! Operador de maior da classe Data
-    /*!
-      Compara se a data atual é maior que a outra data
-    */
+  
+    /// @brief Implementação do operador de maior da classe Data. Compara se a data atual é maior que a outra data
+    /// @param other 
+    /// @return Verdadeiro ou falso.
     bool operator>(const Data& other) const;
-    //! Método to_string
-    /*!
-      Imprime data no formato dd/mm/aaaa
-    */
+
+    /// @brief 
+    /// @param other 
+    /// @return 
     bool operator>=(const Data& other) const;
+
+    /// @brief 
+    /// @param other 
+    /// @return 
     bool operator<=(const Data& other) const;
+
+    /// @brief Imprime data no formato dd/mm/aaaa
+    /// @return String da data formatada. 
     std::string to_string() const;
+
+    /// @brief Getter do atributo dia.
+    /// @return _dia
     unsigned get_dia() const;
+
+    /// @brief Getter do atributo mes.
+    /// @return _mes
     unsigned get_mes() const;
+
+    /// @brief Getter do atributo ano.
+    /// @return _ano
     unsigned get_ano() const;
 
 private:

@@ -9,6 +9,7 @@
 #include "Evento.hpp"
 
 namespace task_manager::core{
+    /// @brief Classe para persistência dos dados em arquivo texto.
     class BancoDados{
         public:
         /// @brief construtor da classe já seta os nomes dos arquivos correspondentes.

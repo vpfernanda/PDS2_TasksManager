@@ -1,0 +1,186 @@
+\hypertarget{classtask__manager_1_1core_1_1Data}{}\doxysection{task\+\_\+manager\+::core\+::Data Class Reference}
+\label{classtask__manager_1_1core_1_1Data}\index{task\_manager::core::Data@{task\_manager::core::Data}}
+
+
+Classe feita para representar uma \mbox{\hyperlink{classtask__manager_1_1core_1_1Data}{Data}} (dia, mes, ano).  
+
+
+
+
+{\ttfamily \#include $<$Data.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Data_a3f5a8d2e20fbd962baabede51c95807a}\label{classtask__manager_1_1core_1_1Data_a3f5a8d2e20fbd962baabede51c95807a}} 
+\mbox{\hyperlink{classtask__manager_1_1core_1_1Data_a3f5a8d2e20fbd962baabede51c95807a}{Data}} ()
+\begin{DoxyCompactList}\small\item\em Construtor default da classe \mbox{\hyperlink{classtask__manager_1_1core_1_1Data}{Data}}. Inicializa com dia, mes e ano iguais a zero. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Data_aa3d2609e2ee9e1d25b3e58af5f24c1fc}\label{classtask__manager_1_1core_1_1Data_aa3d2609e2ee9e1d25b3e58af5f24c1fc}} 
+\mbox{\hyperlink{classtask__manager_1_1core_1_1Data_aa3d2609e2ee9e1d25b3e58af5f24c1fc}{Data}} (unsigned dia, unsigned mes, unsigned ano)
+\begin{DoxyCompactList}\small\item\em Construtor da classe \mbox{\hyperlink{classtask__manager_1_1core_1_1Data}{Data}}. Recebe os parametros dia, mes e ano. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtask__manager_1_1core_1_1Data_a0204141de9b569f4e6ba5e8fabc0a259}{operator==}} (const \mbox{\hyperlink{classtask__manager_1_1core_1_1Data}{Data}} \&other) const
+\begin{DoxyCompactList}\small\item\em Implementa o operador de igualdade da classe \mbox{\hyperlink{classtask__manager_1_1core_1_1Data}{Data}}. Compara se dia, mês e ano são iguais. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtask__manager_1_1core_1_1Data_abe4758fa9b7ca2570571e66c8955442c}{operator$<$}} (const \mbox{\hyperlink{classtask__manager_1_1core_1_1Data}{Data}} \&other) const
+\begin{DoxyCompactList}\small\item\em Implementação do operador de menor da classe \mbox{\hyperlink{classtask__manager_1_1core_1_1Data}{Data}}. Compara se a data atual é menor que a outra data. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtask__manager_1_1core_1_1Data_a353ec5726a99cfdb723a17daee40c461}{operator$>$}} (const \mbox{\hyperlink{classtask__manager_1_1core_1_1Data}{Data}} \&other) const
+\begin{DoxyCompactList}\small\item\em Implementação do operador de maior da classe \mbox{\hyperlink{classtask__manager_1_1core_1_1Data}{Data}}. Compara se a data atual é maior que a outra data. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtask__manager_1_1core_1_1Data_a579145ffedcaa03c0be979799d7bb6fa}{operator$>$=}} (const \mbox{\hyperlink{classtask__manager_1_1core_1_1Data}{Data}} \&other) const
+\item 
+bool \mbox{\hyperlink{classtask__manager_1_1core_1_1Data_ac1b79105f8dd73dc1a1d0fd16d9f34b7}{operator$<$=}} (const \mbox{\hyperlink{classtask__manager_1_1core_1_1Data}{Data}} \&other) const
+\item 
+std\+::string \mbox{\hyperlink{classtask__manager_1_1core_1_1Data_a5fbdf2ce8d68a2b1c860ae1ccefcf2c9}{to\+\_\+string}} () const
+\begin{DoxyCompactList}\small\item\em Imprime data no formato dd/mm/aaaa. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{classtask__manager_1_1core_1_1Data_a54f08ce073554fe4de3d07154c58759b}{get\+\_\+dia}} () const
+\begin{DoxyCompactList}\small\item\em Getter do atributo dia. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{classtask__manager_1_1core_1_1Data_adc48f9f0adac69a9cca990d9803481a7}{get\+\_\+mes}} () const
+\begin{DoxyCompactList}\small\item\em Getter do atributo mes. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{classtask__manager_1_1core_1_1Data_af6330c12d3fa4364d4b0475c16a1fed8}{get\+\_\+ano}} () const
+\begin{DoxyCompactList}\small\item\em Getter do atributo ano. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe feita para representar uma \mbox{\hyperlink{classtask__manager_1_1core_1_1Data}{Data}} (dia, mes, ano). 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Data_af6330c12d3fa4364d4b0475c16a1fed8}\label{classtask__manager_1_1core_1_1Data_af6330c12d3fa4364d4b0475c16a1fed8}} 
+\index{task\_manager::core::Data@{task\_manager::core::Data}!get\_ano@{get\_ano}}
+\index{get\_ano@{get\_ano}!task\_manager::core::Data@{task\_manager::core::Data}}
+\doxysubsubsection{\texorpdfstring{get\_ano()}{get\_ano()}}
+{\footnotesize\ttfamily unsigned task\+\_\+manager\+::core\+::\+Data\+::get\+\_\+ano (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter do atributo ano. 
+
+\begin{DoxyReturn}{Returns}
+\+\_\+ano 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Data_a54f08ce073554fe4de3d07154c58759b}\label{classtask__manager_1_1core_1_1Data_a54f08ce073554fe4de3d07154c58759b}} 
+\index{task\_manager::core::Data@{task\_manager::core::Data}!get\_dia@{get\_dia}}
+\index{get\_dia@{get\_dia}!task\_manager::core::Data@{task\_manager::core::Data}}
+\doxysubsubsection{\texorpdfstring{get\_dia()}{get\_dia()}}
+{\footnotesize\ttfamily unsigned task\+\_\+manager\+::core\+::\+Data\+::get\+\_\+dia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter do atributo dia. 
+
+\begin{DoxyReturn}{Returns}
+\+\_\+dia 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Data_adc48f9f0adac69a9cca990d9803481a7}\label{classtask__manager_1_1core_1_1Data_adc48f9f0adac69a9cca990d9803481a7}} 
+\index{task\_manager::core::Data@{task\_manager::core::Data}!get\_mes@{get\_mes}}
+\index{get\_mes@{get\_mes}!task\_manager::core::Data@{task\_manager::core::Data}}
+\doxysubsubsection{\texorpdfstring{get\_mes()}{get\_mes()}}
+{\footnotesize\ttfamily unsigned task\+\_\+manager\+::core\+::\+Data\+::get\+\_\+mes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter do atributo mes. 
+
+\begin{DoxyReturn}{Returns}
+\+\_\+mes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Data_abe4758fa9b7ca2570571e66c8955442c}\label{classtask__manager_1_1core_1_1Data_abe4758fa9b7ca2570571e66c8955442c}} 
+\index{task\_manager::core::Data@{task\_manager::core::Data}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!task\_manager::core::Data@{task\_manager::core::Data}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool task\+\_\+manager\+::core\+::\+Data\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtask__manager_1_1core_1_1Data}{Data}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Implementação do operador de menor da classe \mbox{\hyperlink{classtask__manager_1_1core_1_1Data}{Data}}. Compara se a data atual é menor que a outra data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Verdadeiro ou falso. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Data_ac1b79105f8dd73dc1a1d0fd16d9f34b7}\label{classtask__manager_1_1core_1_1Data_ac1b79105f8dd73dc1a1d0fd16d9f34b7}} 
+\index{task\_manager::core::Data@{task\_manager::core::Data}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!task\_manager::core::Data@{task\_manager::core::Data}}
+\doxysubsubsection{\texorpdfstring{operator$<$=()}{operator<=()}}
+{\footnotesize\ttfamily bool task\+\_\+manager\+::core\+::\+Data\+::operator$<$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtask__manager_1_1core_1_1Data}{Data}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Data_a0204141de9b569f4e6ba5e8fabc0a259}\label{classtask__manager_1_1core_1_1Data_a0204141de9b569f4e6ba5e8fabc0a259}} 
+\index{task\_manager::core::Data@{task\_manager::core::Data}!operator==@{operator==}}
+\index{operator==@{operator==}!task\_manager::core::Data@{task\_manager::core::Data}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool task\+\_\+manager\+::core\+::\+Data\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtask__manager_1_1core_1_1Data}{Data}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Implementa o operador de igualdade da classe \mbox{\hyperlink{classtask__manager_1_1core_1_1Data}{Data}}. Compara se dia, mês e ano são iguais. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Verdadeiro ou falso. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Data_a353ec5726a99cfdb723a17daee40c461}\label{classtask__manager_1_1core_1_1Data_a353ec5726a99cfdb723a17daee40c461}} 
+\index{task\_manager::core::Data@{task\_manager::core::Data}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!task\_manager::core::Data@{task\_manager::core::Data}}
+\doxysubsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily bool task\+\_\+manager\+::core\+::\+Data\+::operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtask__manager_1_1core_1_1Data}{Data}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Implementação do operador de maior da classe \mbox{\hyperlink{classtask__manager_1_1core_1_1Data}{Data}}. Compara se a data atual é maior que a outra data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Verdadeiro ou falso. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Data_a579145ffedcaa03c0be979799d7bb6fa}\label{classtask__manager_1_1core_1_1Data_a579145ffedcaa03c0be979799d7bb6fa}} 
+\index{task\_manager::core::Data@{task\_manager::core::Data}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!task\_manager::core::Data@{task\_manager::core::Data}}
+\doxysubsubsection{\texorpdfstring{operator$>$=()}{operator>=()}}
+{\footnotesize\ttfamily bool task\+\_\+manager\+::core\+::\+Data\+::operator$>$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtask__manager_1_1core_1_1Data}{Data}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtask__manager_1_1core_1_1Data_a5fbdf2ce8d68a2b1c860ae1ccefcf2c9}\label{classtask__manager_1_1core_1_1Data_a5fbdf2ce8d68a2b1c860ae1ccefcf2c9}} 
+\index{task\_manager::core::Data@{task\_manager::core::Data}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!task\_manager::core::Data@{task\_manager::core::Data}}
+\doxysubsubsection{\texorpdfstring{to\_string()}{to\_string()}}
+{\footnotesize\ttfamily std\+::string task\+\_\+manager\+::core\+::\+Data\+::to\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Imprime data no formato dd/mm/aaaa. 
+
+\begin{DoxyReturn}{Returns}
+String da data formatada. ~\newline
+ 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/core/Data.\+hpp\end{DoxyCompactItemize}
